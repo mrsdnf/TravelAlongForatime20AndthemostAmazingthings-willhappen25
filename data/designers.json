@@ -1,0 +1,91 @@
+{
+  "designers": [
+    {
+      "id": "kamilla",
+      "name": "Kamilla",
+      "team": "AMS",
+      "interviewDate": "2025-12-09",
+      "lastUpdated": "2025-12-09",
+      "toolProficiency": {
+        "gnpt": { "level": "confident", "notes": "Daily use for docs, copywriting, use cases, edge cases" },
+        "rovo": { "level": "learning", "notes": "Just discovered, will adopt for Confluence queries" },
+        "figmaAI": { "level": "none", "notes": "Waiting for approval - privacy concerns" },
+        "copilot": { "level": "minimal", "notes": "Microsoft 365 Copilot - rarely uses" },
+        "miroAI": { "level": "none", "notes": "Team uses FigJam instead" },
+        "githubCopilot": { "level": "none", "notes": "" },
+        "claude": { "level": "minimal", "notes": "Prefers for documents, needs work subscription" },
+        "chatgpt": { "level": "none", "notes": "Uses GNPT instead" },
+        "gemini": { "level": "minimal", "notes": "Will explore more" },
+        "lovable": { "level": "occasional", "notes": "Quick UI ideas - underutilized" }
+      },
+      "painPoints": [
+        { "issue": "AI gives perfect world solutions", "details": "Doesn't account for technical debt and spaghetti code" },
+        { "issue": "Privacy/approval uncertainty", "details": "Figma not approved - team hesitant to use company designs with external AI" },
+        { "issue": "Unpredictable system constraints", "details": "Constraints emerge during implementation that no one anticipated" },
+        { "issue": "Feature tickets not designer-ready", "details": "Written for developers, missing context designers need" }
+      ],
+      "goals": [
+        { "goal": "Meeting summary agent", "priority": "high" },
+        { "goal": "Definition of Ready checker with PM feedback", "priority": "high" },
+        { "goal": "Lovable for interactive tutorials", "priority": "medium" },
+        { "goal": "Claude for design/documents", "priority": "medium" },
+        { "goal": "Figma MCP integration", "priority": "low" }
+      ],
+      "actionItems": [
+        { "action": "Get Claude work subscription sorted", "owner": "ditte", "status": "pending" },
+        { "action": "Share DoR checker + add PM feedback output", "owner": "ditte", "status": "pending" },
+        { "action": "Set up meeting summary agent", "owner": "kamilla", "status": "pending" },
+        { "action": "Clarify AI privacy policy for Figma/designs", "owner": "ditte", "status": "pending" },
+        { "action": "Explore onboarding tutorial prototype in Lovable", "owner": "kamilla", "status": "pending" }
+      ],
+      "progressNotes": [
+        { "date": "2025-12-09", "note": "Initial interview completed. She is already skilled at AI prompting and uses it as a logic partner. Main blockers are tool access and policy clarity, not training." }
+      ],
+      "keyInsight": "Already skilled at AI prompting - needs tools set up, policies clarified, and workflows built for her constrained context, not training on how to use AI"
+    },
+    {
+      "id": "gg",
+      "name": "GG",
+      "team": "Design System",
+      "interviewDate": "2025-12-09",
+      "lastUpdated": "2025-12-09",
+      "toolProficiency": {
+        "gnpt": { "level": "none", "notes": "" },
+        "rovo": { "level": "none", "notes": "" },
+        "figmaAI": { "level": "none", "notes": "Excited for when available - sees it as game changer for token naming, spell checking, consistency" },
+        "copilot": { "level": "none", "notes": "" },
+        "miroAI": { "level": "none", "notes": "" },
+        "githubCopilot": { "level": "none", "notes": "" },
+        "claude": { "level": "learning", "notes": "Starting to explore for digital design systems, prefers over Gemini" },
+        "chatgpt": { "level": "confident", "notes": "Uses extensively as advisor/conversation partner, not for solutions" },
+        "gemini": { "level": "minimal", "notes": "Tried, prefers Claude" },
+        "lovable": { "level": "none", "notes": "" }
+      },
+      "painPoints": [
+        { "issue": "Prompt crafting takes too long", "details": "Time spent creating detailed prompts often equals time to figure it out himself" },
+        { "issue": "AI outputs are generic without detailed prompts", "details": "All AI apps provide same outputs based on same alignment unless very informative from start" },
+        { "issue": "Security/approval concerns", "details": "Worried about using company design system data with external AI - wants written approval from Michael" },
+        { "issue": "No clear roadmap for AI adoption", "details": "Needs organized steps and strategy, not ad-hoc exploration" }
+      ],
+      "goals": [
+        { "goal": "Learn prompt engineering for digital design systems", "priority": "high" },
+        { "goal": "Explore Claude for design system work", "priority": "high" },
+        { "goal": "Contribute to digital design system development", "priority": "high" },
+        { "goal": "Use Figma AI when available", "priority": "medium" },
+        { "goal": "Review shadcn/ui and prototype", "priority": "medium" }
+      ],
+      "actionItems": [
+        { "action": "Send email to Michael confirming Claude approval for design system data", "owner": "ditte", "status": "pending" },
+        { "action": "Learn prompt engineering for digital design systems", "owner": "gg", "status": "pending" },
+        { "action": "Review shadcn/ui component library", "owner": "gg", "status": "pending" },
+        { "action": "Review the video device setup wizard prototype", "owner": "gg", "status": "pending" },
+        { "action": "Propose calendar time allocation after current PI", "owner": "gg", "status": "pending" },
+        { "action": "Schedule follow-up meeting", "owner": "ditte", "status": "pending" }
+      ],
+      "progressNotes": [
+        { "date": "2025-12-09", "note": "Initial discussion. Very enthusiastic about digital design systems direction. Uses AI extensively as advisor/conversation partner rather than for solutions. Willing to contribute as much as needed but currently focused on Mumbai work through current PI. Will be more available after this PI. Concerned about security - wants written approval before using design system data with Claude." }
+      ],
+      "keyInsight": "Experienced AI user who sees it as advisor not solution-giver. Excited about digital design system vision but needs clear roadmap, security approval, and time allocation after current PI"
+    }
+  ]
+}

@@ -1,0 +1,2045 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Adoption in UX - Strategy Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=SF+Pro+Display:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Skip link for keyboard navigation -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Liquid Glass Background -->
+    <div class="glass-bg" aria-hidden="true">
+        <div class="glass-orb orb-1"></div>
+        <div class="glass-orb orb-2"></div>
+        <div class="glass-orb orb-3"></div>
+    </div>
+
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar" id="sidebar" aria-label="Main navigation">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-brain"></i>
+                <span>AI + UX</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar navigation" aria-expanded="true">
+                <i class="fas fa-bars" aria-hidden="true"></i>
+            </button>
+        </div>
+
+        <div class="nav-section" role="group" aria-labelledby="nav-overview">
+            <span class="nav-label" id="nav-overview">Overview</span>
+            <a href="#dashboard" class="nav-item active" data-page="dashboard">
+                <i class="fas fa-th-large" aria-hidden="true"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="#timeline" class="nav-item" data-page="timeline">
+                <i class="fas fa-stream" aria-hidden="true"></i>
+                <span>Timeline</span>
+            </a>
+            <a href="#team-overview" class="nav-item" data-page="team-overview">
+                <i class="fas fa-users" aria-hidden="true"></i>
+                <span>Team Overview</span>
+            </a>
+        </div>
+
+        <div class="nav-section" role="group" aria-labelledby="nav-tools">
+            <span class="nav-label" id="nav-tools">AI Tools</span>
+            <a href="#tools" class="nav-item" data-page="tools">
+                <i class="fas fa-tools" aria-hidden="true"></i>
+                <span>Tool Strategy</span>
+            </a>
+        </div>
+
+        <div class="nav-section" role="group" aria-labelledby="nav-phases">
+            <span class="nav-label" id="nav-phases">Design Phases</span>
+            <a href="#phase1" class="nav-item" data-page="phase1">
+                <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                <span>Feature Readiness</span>
+            </a>
+            <a href="#phase2" class="nav-item" data-page="phase2">
+                <i class="fas fa-compass" aria-hidden="true"></i>
+                <span>Initial Investigation</span>
+            </a>
+            <a href="#research" class="nav-item" data-page="research">
+                <i class="fas fa-microscope" aria-hidden="true"></i>
+                <span>Research</span>
+            </a>
+            <a href="#phase3" class="nav-item" data-page="phase3">
+                <i class="fas fa-pencil-ruler" aria-hidden="true"></i>
+                <span>Wireframing</span>
+            </a>
+            <a href="#phase4" class="nav-item" data-page="phase4">
+                <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                <span>UI Flows</span>
+            </a>
+            <a href="#phase5" class="nav-item" data-page="phase5">
+                <i class="fas fa-file-export" aria-hidden="true"></i>
+                <span>Handover</span>
+            </a>
+        </div>
+
+        <div class="nav-section" role="group" aria-labelledby="nav-infra">
+            <span class="nav-label" id="nav-infra">Infrastructure</span>
+            <a href="#agents" class="nav-item" data-page="agents">
+                <i class="fas fa-robot" aria-hidden="true"></i>
+                <span>AI Agents</span>
+            </a>
+            <a href="#checklist" class="nav-item" data-page="checklist">
+                <i class="fas fa-list-check" aria-hidden="true"></i>
+                <span>Usage Checklist</span>
+            </a>
+        </div>
+
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content" id="main-content" role="main">
+
+        <!-- Dashboard Page -->
+        <section class="page active" id="dashboard">
+            <div class="page-header">
+                <h1>AI-Augmented UX Strategy</h1>
+                <p class="subtitle">Transforming your UX team to AI-augmented architects</p>
+            </div>
+
+            <div class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <h2>Shift Left & Automate the Mundane</h2>
+                        <p>This strategy addresses your specific constraints: <strong>Azure DevOps</strong>, <strong>SAFe</strong>, <strong>Figma</strong>, and your internal <strong>Chat GNPT</strong>.</p>
+                        <div class="hero-stats">
+                            <div class="stat-card glass-card">
+                                <i class="fas fa-arrow-left"></i>
+                                <span class="stat-value">Shift Left</span>
+                                <span class="stat-label">Force clarity before design</span>
+                            </div>
+                            <div class="stat-card glass-card">
+                                <i class="fas fa-bolt"></i>
+                                <span class="stat-value">Explore</span>
+                                <span class="stat-label">Options faster during design</span>
+                            </div>
+                            <div class="stat-card glass-card">
+                                <i class="fas fa-magic"></i>
+                                <span class="stat-value">Automate</span>
+                                <span class="stat-label">Documentation after design</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="hero-image">
+                        <div class="ai-visual">
+                            <div class="ai-core">
+                                <i class="fas fa-microchip"></i>
+                            </div>
+                            <div class="ai-ring ring-1"></div>
+                            <div class="ai-ring ring-2"></div>
+                            <div class="ai-ring ring-3"></div>
+                            <div class="ai-node node-1"><i class="fas fa-palette"></i></div>
+                            <div class="ai-node node-2"><i class="fas fa-code"></i></div>
+                            <div class="ai-node node-3"><i class="fas fa-users"></i></div>
+                            <div class="ai-node node-4"><i class="fas fa-chart-line"></i></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="principle-card glass-card">
+                <div class="principle-icon">
+                    <i class="fas fa-lightbulb"></i>
+                </div>
+                <div class="principle-content">
+                    <h3>The Core Principle</h3>
+                    <p>AI does not replace the designer's judgment; it replaces the "blank page" and the "administrative burden."</p>
+                </div>
+            </div>
+
+            <div class="quick-links">
+                <h3>Quick Navigation</h3>
+                <div class="links-grid">
+                    <a href="#timeline" class="quick-link glass-card" data-page="timeline">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>View Timeline</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#tools" class="quick-link glass-card" data-page="tools">
+                        <i class="fas fa-wrench"></i>
+                        <span>Tool Strategy</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#agents" class="quick-link glass-card" data-page="agents">
+                        <i class="fas fa-robot"></i>
+                        <span>AI Agents</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Timeline Page -->
+        <section class="page" id="timeline">
+            <div class="page-header">
+                <h1>Implementation Timeline</h1>
+                <p class="subtitle">Progressive rollout of AI capabilities</p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <div class="timeline-phase">
+                    <div class="phase-marker">
+                        <span class="phase-number">1</span>
+                    </div>
+                    <div class="phase-content glass-card">
+                        <div class="phase-header">
+                            <h3>Quick Wins</h3>
+                        </div>
+                        <div class="phase-items">
+                            <a href="#tools" class="timeline-item" data-page="tools">
+                                <i class="fas fa-comment-dots"></i>
+                                <div class="item-content">
+                                    <span class="item-title">Start Using Chat GNPT</span>
+                                    <span class="item-desc">Internal AI for specs, edge cases, and flow diagrams</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="#tools" class="timeline-item" data-page="tools">
+                                <i class="fas fa-search"></i>
+                                <div class="item-content">
+                                    <span class="item-title">Enable Rovo Search</span>
+                                    <span class="item-desc">Find owners, past decisions, and context in Confluence</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="#phase1" class="timeline-item" data-page="phase1">
+                                <i class="fas fa-clipboard-check"></i>
+                                <div class="item-content">
+                                    <span class="item-title">ADO Gatekeeper Prompt</span>
+                                    <span class="item-desc">Distribute refinement prompts to all POs</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="#phase5" class="timeline-item" data-page="phase5">
+                                <i class="fas fa-users"></i>
+                                <div class="item-content">
+                                    <span class="item-title">Meeting Hygiene</span>
+                                    <span class="item-desc">Use Copilot for Design Review summaries</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-marker">
+                        <span class="phase-number">2</span>
+                    </div>
+                    <div class="phase-content glass-card">
+                        <div class="phase-header">
+                            <h3>Tool Expansion</h3>
+                        </div>
+                        <div class="phase-items">
+                            <a href="#phase3" class="timeline-item" data-page="phase3">
+                                <i class="fas fa-puzzle-piece"></i>
+                                <div class="item-content">
+                                    <span class="item-title">Install Figma Plugins</span>
+                                    <span class="item-desc">License Wireframe Designer and Relume</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="#research" class="timeline-item" data-page="research">
+                                <i class="fas fa-microscope"></i>
+                                <div class="item-content">
+                                    <span class="item-title">Research Tools</span>
+                                    <span class="item-desc">Set up Looppanel or Notably for transcript analysis</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="#phase5" class="timeline-item" data-page="phase5">
+                                <i class="fas fa-vial"></i>
+                                <div class="item-content">
+                                    <span class="item-title">QA Integration</span>
+                                    <span class="item-desc">Deliver AI-Generated Test Cases with Figma files</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-phase">
+                    <div class="phase-marker">
+                        <span class="phase-number">3</span>
+                    </div>
+                    <div class="phase-content glass-card">
+                        <div class="phase-header">
+                            <h3>Deep Integration</h3>
+                        </div>
+                        <div class="phase-items">
+                            <a href="#agents" class="timeline-item" data-page="agents">
+                                <i class="fas fa-sitemap"></i>
+                                <div class="item-content">
+                                    <span class="item-title">Build Org Navigator</span>
+                                    <span class="item-desc">Connect Chat GNPT to Microsoft Graph/ADO</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="#agents" class="timeline-item" data-page="agents">
+                                <i class="fas fa-shield-alt"></i>
+                                <div class="item-content">
+                                    <span class="item-title">Design System Agent</span>
+                                    <span class="item-desc">Feed Design System rules into Chat GNPT</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                            <a href="#tools" class="timeline-item" data-page="tools">
+                                <i class="fas fa-eye"></i>
+                                <div class="item-content">
+                                    <span class="item-title">Visual QA</span>
+                                    <span class="item-desc">Use Figma MCP to compare designs vs code</span>
+                                </div>
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tools Page -->
+        <section class="page" id="tools">
+            <div class="page-header">
+                <h1>AI Tool Strategy</h1>
+                <p class="subtitle">Three security tiers based on what you're working on</p>
+            </div>
+
+            <!-- AI by Phase Matrix -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 32px;">
+                <h3 style="font-size: 1.2rem; margin-bottom: 24px;"><i class="fas fa-map" style="margin-right: 10px; color: var(--accent-tertiary);"></i>Which AI for Which Phase?</h3>
+
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; font-size: 0.9rem;">
+                        <thead>
+                            <tr style="border-bottom: 2px solid rgba(255,255,255,0.2);">
+                                <th style="text-align: left; padding: 12px 16px; color: var(--text-primary);">UX Phase</th>
+                                <th style="text-align: center; padding: 12px 8px; color: var(--text-muted);"><i class="fas fa-search" style="margin-right: 4px;"></i>Rovo</th>
+                                <th style="text-align: center; padding: 12px 8px; color: var(--text-muted);"><i class="fas fa-chalkboard" style="margin-right: 4px;"></i>Miro AI</th>
+                                <th style="text-align: center; padding: 12px 8px; color: var(--text-muted);"><i class="fas fa-users" style="margin-right: 4px;"></i>Copilot 365</th>
+                                <th style="text-align: center; padding: 12px 8px; color: var(--text-muted);"><i class="fab fa-figma" style="margin-right: 4px;"></i>Figma AI</th>
+                                <th style="text-align: center; padding: 12px 8px; color: var(--text-muted);"><i class="fab fa-microsoft" style="margin-right: 4px;"></i>ADO/Copilot</th>
+                            </tr>
+                        </thead>
+                        <tbody style="color: var(--text-secondary);">
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 16px;"><strong>Feature Readiness</strong></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 16px;"><strong>Initial Investigation</strong></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 16px;"><strong>Research</strong></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 16px;"><strong>Wireframing</strong></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                            </tr>
+                            <tr style="border-bottom: 1px solid rgba(255,255,255,0.1);">
+                                <td style="padding: 12px 16px;"><strong>UI Flows & Edge Cases</strong></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                            </tr>
+                            <tr>
+                                <td style="padding: 12px 16px;"><strong>Handover & Docs</strong></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: rgba(255,255,255,0.2);"></i></td>
+                                <td style="text-align: center; padding: 12px 8px;"><i class="fas fa-circle" style="color: var(--status-success);"></i></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div style="margin-top: 20px; display: flex; gap: 24px; font-size: 0.85rem; color: var(--text-muted);">
+                    <span><i class="fas fa-circle" style="color: var(--status-success); margin-right: 6px;"></i>Primary use</span>
+                    <span><i class="fas fa-circle" style="color: rgba(255,255,255,0.2); margin-right: 6px;"></i>Limited/No use</span>
+                </div>
+            </div>
+
+            <!-- Security Tiers Overview -->
+            <div class="phase-overview glass-card" style="padding: 24px; margin-bottom: 32px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 16px;"><i class="fas fa-shield-alt" style="color: var(--accent-primary); margin-right: 10px;"></i>When to Use Which Tier</h3>
+                <p style="color: var(--text-secondary); line-height: 1.7;">The key question: <strong>Is this new and revolutionary?</strong> Features that give us competitive advantage and don't exist elsewhere in the industry should stay internal. For everything else, trusted external AI is fine.</p>
+                <div style="margin-top: 16px; padding: 12px; background: rgba(255,255,255,0.05); border-radius: 8px;">
+                    <p style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-lightbulb" style="margin-right: 8px; color: var(--accent-tertiary);"></i><strong>Rule of thumb:</strong> If a competitor could build something similar with public knowledge, Tier 2 is fine. If it's truly novel and gives us an edge, keep it in Tier 1.</p>
+                </div>
+            </div>
+
+            <!-- AI Toolkit -->
+            <div>
+                <h2 style="font-size: 1.4rem; margin-bottom: 8px;"><i class="fas fa-toolbox" style="margin-right: 12px; color: var(--accent-primary);"></i>Your AI Toolkit by Platform</h2>
+                <h3 style="font-size: 1.2rem; margin-bottom: 24px;"><i class="fas fa-lock" style="margin-right: 12px; color: var(--accent-tertiary);"></i>Tier 1: Internal Tools</h3>
+
+                <div class="tools-grid">
+                    <!-- Miro AI -->
+                    <div class="tool-card glass-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, #FFD02F, #F7C325);">
+                                <i class="fas fa-chalkboard"></i>
+                            </div>
+                            <div class="tool-badge semi">Fully trusted</div>
+                        </div>
+                        <h3>Miro AI</h3>
+                        <p class="tool-desc">AI-powered visual collaboration and brainstorming.</p>
+                        <ul class="tool-uses">
+                            <li><i class="fas fa-check"></i><strong>Idea generation</strong> - Seed brainstorms with diverse starting points</li>
+                            <li><i class="fas fa-check"></i><strong>Auto-structuring</strong> - Convert sticky notes to diagrams/mind maps</li>
+                            <li><i class="fas fa-check"></i><strong>AI Sidekicks</strong> - Product Leader, Agile Coach personas for feedback</li>
+                            <li><i class="fas fa-check"></i><strong>Summarize threads</strong> - Condense long comment discussions</li>
+                        </ul>
+                    </div>
+
+                    <!-- Microsoft Copilot -->
+                    <div class="tool-card glass-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, #0078D4, #106EBE);">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <div class="tool-badge confidential">Fully trusted</div>
+                        </div>
+                        <h3>Microsoft 365 Copilot</h3>
+                        <p class="tool-desc">Meeting intelligence and documentation automation.</p>
+                        <ul class="tool-uses">
+                            <li><i class="fas fa-check"></i><strong>Meeting recap</strong> - Summarize who said what, agreements & disagreements</li>
+                            <li><i class="fas fa-check"></i><strong>Action items</strong> - Auto-extract follow-up tasks from meetings</li>
+                            <li><i class="fas fa-check"></i><strong>Q&A during meetings</strong> - Ask "What did they say about X?"</li>
+                            <li><i class="fas fa-check"></i><strong>Visual content</strong> - Understand shared screens & presentations</li>
+                        </ul>
+                    </div>
+
+                    <!-- Azure DevOps + Copilot -->
+                    <div class="tool-card glass-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, #0078D4, #005A9E);">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="tool-badge confidential">Fully trusted</div>
+                        </div>
+                        <h3>ADO + GitHub Copilot</h3>
+                        <p class="tool-desc">Work item management and code assistance.</p>
+                        <ul class="tool-uses">
+                            <li><i class="fas fa-check"></i><strong>Work item summary</strong> - Summarize items including discussion history</li>
+                            <li><i class="fas fa-check"></i><strong>Generate test cases</strong> - Create test steps from User Stories</li>
+                            <li><i class="fas fa-check"></i><strong>PR descriptions</strong> - Auto-generate pull request summaries</li>
+                            <li><i class="fas fa-check"></i><strong>Backlog management</strong> - De-duplicate and prioritize items</li>
+                        </ul>
+                    </div>
+
+                    <!-- Figma AI -->
+                    <div class="tool-card glass-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, #F24E1E, #A259FF);">
+                                <i class="fab fa-figma"></i>
+                            </div>
+                            <div class="tool-badge semi">Fully trusted</div>
+                        </div>
+                        <h3>Figma AI</h3>
+                        <p class="tool-desc">AI-powered design and prototyping features.</p>
+                        <ul class="tool-uses">
+                            <li><i class="fas fa-check"></i><strong>Text-to-UI</strong> - Generate wireframes from descriptions</li>
+                            <li><i class="fas fa-check"></i><strong>Dummy data</strong> - Realistic placeholder content</li>
+                            <li><i class="fas fa-check"></i><strong>Accessibility scan</strong> - Check contrast, touch targets</li>
+                            <li><i class="fas fa-check"></i><strong>Layer renaming</strong> - Auto-organize layer hierarchy</li>
+                        </ul>
+                    </div>
+
+                    <!-- Chat GNPT -->
+                    <div class="tool-card glass-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, #10B981, #059669);">
+                                <i class="fas fa-comment-dots"></i>
+                            </div>
+                            <div class="tool-badge semi">Fully trusted</div>
+                        </div>
+                        <h3>Chat GNPT</h3>
+                        <p class="tool-desc">Internal enterprise AI assistant with custom Agents.</p>
+                        <ul class="tool-uses">
+                            <li><i class="fas fa-check"></i><strong>Feature specs</strong> - Generate complete specs with custom Agents</li>
+                            <li><i class="fas fa-check"></i><strong>Edge cases</strong> - Brainstorm scenarios and error states</li>
+                            <li><i class="fas fa-check"></i><strong>Flow diagrams</strong> - Output Mermaid.js syntax for visualization</li>
+                            <li><i class="fas fa-check"></i><strong>Test cases</strong> - Generate Gherkin test scenarios</li>
+                        </ul>
+                    </div>
+
+                    <!-- Rovo -->
+                    <div class="tool-card glass-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, #0052CC, #0747A6);">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <div class="tool-badge semi">Fully trusted</div>
+                        </div>
+                        <h3>Rovo</h3>
+                        <p class="tool-desc">Atlassian AI search across Jira, Confluence & connected tools.</p>
+                        <ul class="tool-uses">
+                            <li><i class="fas fa-check"></i><strong>Find ownership</strong> - "Who owns [system/feature]?"</li>
+                            <li><i class="fas fa-check"></i><strong>Past decisions</strong> - Surface historical context and rationale</li>
+                            <li><i class="fas fa-check"></i><strong>Related work</strong> - Find similar features to avoid duplication</li>
+                            <li><i class="fas fa-check"></i><strong>Stakeholders</strong> - Identify who to involve early</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tier 2: Trusted External AI -->
+                <h3 style="font-size: 1.2rem; margin: 32px 0 24px 0;"><i class="fas fa-check-circle" style="margin-right: 12px; color: var(--status-success);"></i>Tier 2: Trusted External AI</h3>
+                <div class="tools-grid">
+                    <!-- Claude AI -->
+                    <div class="tool-card glass-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, #D97706, #B45309);">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="tool-badge public">Trusted</div>
+                        </div>
+                        <h3>Claude AI</h3>
+                        <p class="tool-desc">Anthropic (USA) · Free / Pro $20/mo</p>
+                        <p style="color: var(--status-success); font-size: 0.75rem; margin-bottom: 8px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>SOC 2 · GDPR · No training on user data</p>
+                        <a href="https://claude.ai" target="_blank" style="color: var(--accent-primary); font-size: 0.85rem; text-decoration: none; display: block; margin-bottom: 12px;">claude.ai <i class="fas fa-external-link-alt" style="font-size: 0.7rem;"></i></a>
+                        <ul class="tool-uses">
+                            <li><i class="fas fa-check"></i><strong>Long-form writing</strong> - Technical docs, handoff specs</li>
+                            <li><i class="fas fa-check"></i><strong>Code generation</strong> - React/CSS prototypes</li>
+                            <li><i class="fas fa-check"></i><strong>Research synthesis</strong> - Summarize competitor analysis</li>
+                        </ul>
+                    </div>
+
+                    <!-- Gemini -->
+                    <div class="tool-card glass-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, #4285F4, #34A853);">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="tool-badge public">Trusted</div>
+                        </div>
+                        <h3>Gemini</h3>
+                        <p class="tool-desc">Google (USA) · Free / Advanced $20/mo</p>
+                        <p style="color: var(--status-success); font-size: 0.75rem; margin-bottom: 8px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Enterprise-grade · SOC 2 · ISO 27001</p>
+                        <a href="https://gemini.google.com" target="_blank" style="color: var(--accent-primary); font-size: 0.85rem; text-decoration: none; display: block; margin-bottom: 12px;">gemini.google.com <i class="fas fa-external-link-alt" style="font-size: 0.7rem;"></i></a>
+                        <ul class="tool-uses">
+                            <li><i class="fas fa-check"></i><strong>Multimodal analysis</strong> - Analyze competitor screenshots</li>
+                            <li><i class="fas fa-check"></i><strong>Research</strong> - Market trends, user behavior patterns</li>
+                            <li><i class="fas fa-check"></i><strong>Content generation</strong> - Generic UX copy, personas</li>
+                        </ul>
+                    </div>
+
+                    <!-- ChatGPT -->
+                    <div class="tool-card glass-card">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, #10A37F, #0D8A6A);">
+                                <i class="fas fa-comments"></i>
+                            </div>
+                            <div class="tool-badge public">Trusted</div>
+                        </div>
+                        <h3>ChatGPT</h3>
+                        <p class="tool-desc">OpenAI (USA) · Free / Plus $20/mo</p>
+                        <p style="color: var(--status-success); font-size: 0.75rem; margin-bottom: 8px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>SOC 2 · GDPR · Enterprise options available</p>
+                        <a href="https://chat.openai.com" target="_blank" style="color: var(--accent-primary); font-size: 0.85rem; text-decoration: none; display: block; margin-bottom: 12px;">chat.openai.com <i class="fas fa-external-link-alt" style="font-size: 0.7rem;"></i></a>
+                        <ul class="tool-uses">
+                            <li><i class="fas fa-check"></i><strong>Quick ideation</strong> - Brainstorm naming, copy variants</li>
+                            <li><i class="fas fa-check"></i><strong>Image generation</strong> - DALL-E for concept visuals</li>
+                            <li><i class="fas fa-check"></i><strong>Code assistance</strong> - Debug prototypes, explain APIs</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Tier 3: Never Use -->
+                <h3 style="font-size: 1.2rem; margin: 32px 0 16px 0;"><i class="fas fa-ban" style="margin-right: 12px; color: var(--status-error);"></i>Tier 3: Never Use - Unsafe AI</h3>
+                <div style="margin-bottom: 24px; padding: 12px 16px; background: rgba(239, 68, 68, 0.1); border-radius: 8px; border-left: 3px solid var(--status-error);">
+                    <p style="color: var(--status-error); font-size: 0.85rem;"><i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i><strong>Why Tier 3 is dangerous:</strong> China's laws (National Intelligence Law 2017, Data Security Law 2021) require companies to share data with the government. DeepSeek has been found with hidden code that can transfer user data directly to Chinese government servers.</p>
+                </div>
+                <div class="tools-grid">
+                    <!-- DeepSeek -->
+                    <div class="tool-card glass-card" style="border: 1px solid var(--status-error);">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, var(--status-error), #991B1B);">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="tool-badge" style="background: var(--status-error); color: white;">UNSAFE</div>
+                        </div>
+                        <h3>DeepSeek</h3>
+                        <p class="tool-desc">DeepSeek (China) · Free</p>
+                        <p style="color: var(--status-error); font-size: 0.75rem; margin-bottom: 8px;"><i class="fas fa-exclamation-triangle" style="margin-right: 4px;"></i>Hidden code links directly to Chinese govt servers</p>
+                        <ul class="tool-uses" style="color: var(--text-muted);">
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Transmits device data unencrypted</li>
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Logs keystroke patterns</li>
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Banned in Italy, under US govt review</li>
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Data stored on Chinese servers</li>
+                        </ul>
+                    </div>
+
+                    <!-- Qwen -->
+                    <div class="tool-card glass-card" style="border: 1px solid var(--status-error);">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, var(--status-error), #991B1B);">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="tool-badge" style="background: var(--status-error); color: white;">UNSAFE</div>
+                        </div>
+                        <h3>Qwen (Alibaba)</h3>
+                        <p class="tool-desc">Alibaba Cloud (China) · Free</p>
+                        <p style="color: var(--status-error); font-size: 0.75rem; margin-bottom: 8px;"><i class="fas fa-exclamation-triangle" style="margin-right: 4px;"></i>Alibaba's own AI admits security risks</p>
+                        <ul class="tool-uses" style="color: var(--text-muted);">
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Qwen admitted risks for Western companies</li>
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Vulnerable to prompt injection attacks</li>
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Code/prompts may expose proprietary logic</li>
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Subject to Chinese data laws</li>
+                        </ul>
+                    </div>
+
+                    <!-- Ernie / Baidu -->
+                    <div class="tool-card glass-card" style="border: 1px solid var(--status-error);">
+                        <div class="tool-header">
+                            <div class="tool-icon" style="background: linear-gradient(135deg, var(--status-error), #991B1B);">
+                                <i class="fas fa-skull-crossbones"></i>
+                            </div>
+                            <div class="tool-badge" style="background: var(--status-error); color: white;">UNSAFE</div>
+                        </div>
+                        <h3>Ernie / Baidu AI</h3>
+                        <p class="tool-desc">Baidu (China) · Free / Paid tiers</p>
+                        <p style="color: var(--status-error); font-size: 0.75rem; margin-bottom: 8px;"><i class="fas fa-exclamation-triangle" style="margin-right: 4px;"></i>Same legal risks as other Chinese AI</p>
+                        <ul class="tool-uses" style="color: var(--text-muted);">
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Subject to National Intelligence Law 2017</li>
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Must share data with govt on request</li>
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>No GDPR compliance for EU data</li>
+                            <li><i class="fas fa-times" style="color: var(--status-error);"></i>Censored responses on sensitive topics</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Why These Are Dangerous -->
+                <div class="phase-overview glass-card" style="padding: 24px; margin-top: 24px; border: 1px solid var(--status-error);">
+                    <h4 style="color: var(--status-error); margin-bottom: 16px;"><i class="fas fa-gavel" style="margin-right: 8px;"></i>Why Chinese AI Is a Legal Risk</h4>
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
+                        <div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;"><strong>National Intelligence Law (2017)</strong></p>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">Requires all Chinese companies to "support, assist and cooperate with state intelligence work." This means any data you input can be accessed by Chinese authorities.</p>
+                        </div>
+                        <div>
+                            <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;"><strong>Data Security Law (2021)</strong></p>
+                            <p style="color: var(--text-muted); font-size: 0.85rem;">Gives the government broad authority to access data for "national security." Companies cannot refuse or even disclose that data was requested.</p>
+                        </div>
+                    </div>
+                    <div style="margin-top: 16px; padding: 12px; background: rgba(239, 68, 68, 0.1); border-radius: 8px;">
+                        <p style="color: var(--status-error); font-size: 0.85rem;"><i class="fas fa-exclamation-circle" style="margin-right: 8px;"></i><strong>Bottom line:</strong> Anything you type into DeepSeek, Qwen, or Ernie could end up with the Chinese government. This includes design specs, user research, competitive strategies, and any text you input.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Phase 1: Feature Readiness -->
+        <section class="page" id="phase1">
+            <div class="page-header">
+                <h1>Feature Readiness</h1>
+                <p class="subtitle">Use AI as your thinking partner</p>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 32px;">
+                <div class="overview-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-exclamation-circle" style="color: var(--status-warning); margin-right: 8px;"></i>The Challenge</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">Turning initial ideas into well-defined features takes time. Important details can get missed and sometimes UX receives incomplete requirements and wastes time having to clarify.</p>
+
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-lightbulb" style="color: var(--accent-tertiary); margin-right: 8px;"></i>The Solution</h3>
+                        <p style="color: var(--text-secondary);">Use AI as a thinking partner to help structure your ideas. You bring the vision and business knowledge - AI helps you think it through more completely.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-route" style="color: var(--status-success); margin-right: 8px;"></i>The Workflow</h3>
+                        <ol style="color: var(--text-secondary); margin-left: 20px; line-height: 2;">
+                            <li><strong>Start</strong> - Share your rough concept with AI</li>
+                            <li><strong>Explore</strong> - Let AI ask clarifying questions</li>
+                            <li><strong>Review</strong> - Accept what fits, reject what doesn't</li>
+                            <li><strong>Complete</strong> - Add your expertise and context</li>
+                            <li><strong>Finalize</strong> - Create the ADO feature</li>
+                        </ol>
+                    </div>
+                </div>
+                <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-user-tie" style="margin-right: 8px;"></i><strong>Key principle:</strong> AI is a thinking partner, not a replacement. Every decision remains yours.</p>
+                </div>
+            </div>
+
+            <!-- Two Column Layout -->
+            <div class="two-column" style="margin-bottom: 24px;">
+                <!-- Left: Prompt Example -->
+                <div class="prompt-card glass-card">
+                    <div class="prompt-header">
+                        <i class="fas fa-comments"></i>
+                        <span>Example Conversation Starter</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="prompt-content">
+                        <p>"I'm working on a feature idea: '[Your concept]'.</p>
+                        <p style="margin-top: 12px;">Help me think this through:</p>
+                        <ul style="margin-top: 8px; margin-left: 16px; list-style: disc;">
+                            <li>What questions should I be asking?</li>
+                            <li>Help me draft a user story</li>
+                            <li>What acceptance criteria might I be missing?</li>
+                            <li>What technical considerations should I discuss?"</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Right: Feature Readiness Checklist -->
+                <div class="checklist-section do glass-card">
+                    <div class="checklist-header">
+                        <i class="fas fa-clipboard-check"></i>
+                        <h3>Feature Readiness Checklist</h3>
+                    </div>
+                    <ul class="checklist-items" style="font-size: 0.9rem;">
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>User Story</strong> <span>- As a [user], I want [goal], so that [benefit]</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Problem Statement</strong> <span>- What pain point does this solve?</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Acceptance Criteria</strong> <span>- Testable conditions for "done"</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Target Users</strong> <span>- Which personas or segments?</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Success Metrics</strong> <span>- How do we measure success?</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Scope Boundaries</strong> <span>- What's out of scope?</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Technical Constraints</strong> <span>- API limits, dependencies?</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Business Context</strong> <span>- Priority and stakeholders</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI Tools for This Phase -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-top: 24px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 20px;"><i class="fas fa-wand-magic-sparkles" style="color: var(--accent-primary); margin-right: 10px;"></i>AI Tools for Feature Readiness</h3>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT + Agents</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Use custom Agents to structure feature ideas and generate complete specs</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> Use a Feature Creation Agent to walk through requirements step-by-step</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Agents can enforce your team's feature template and quality standards</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-search" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Rovo</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Atlassian · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Find existing specs, past decisions, and stakeholders</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> "What requirements exist for [feature area]?" or "Who owns [system]?"</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Search for related features to avoid duplication</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-chalkboard" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Miro AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Brainstorm requirements with AI Sidekicks as thinking partners</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> Use Product Leader sidekick to challenge assumptions and find gaps</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Auto-structure messy brainstorm notes into organized requirements</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fab fa-microsoft" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">ADO + Copilot</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Summarize related work items and generate structured specs</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> Use MCP to summarize backlog items and auto-generate acceptance criteria</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> De-duplicate and prioritize related backlog items</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 2: Initial Investigation -->
+        <section class="page" id="phase2">
+            <div class="page-header">
+                <h1>Initial Investigation</h1>
+                <p class="subtitle">Find context and answers faster</p>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 32px;">
+                <div class="overview-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-exclamation-circle" style="color: var(--status-warning); margin-right: 8px;"></i>The Challenge</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">"Who do I ask?" and "Can we technically do this?" - Finding the right people and technical constraints can slow down the design process.</p>
+
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-lightbulb" style="color: var(--accent-tertiary); margin-right: 8px;"></i>The Solution</h3>
+                        <p style="color: var(--text-secondary);">Use <strong>Ask Rovo</strong> in Confluence to quickly answer context questions about ownership, constraints, and history across all your connected tools.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-robot" style="color: var(--status-success); margin-right: 8px;"></i>What Rovo Can Do</h3>
+                        <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 2;">
+                            <li><strong>Unified Search</strong> - Search Jira, Confluence & connected tools</li>
+                            <li><strong>Natural Language</strong> - Ask questions in plain English</li>
+                            <li><strong>Deep Research</strong> - Get cited reports across sources</li>
+                            <li><strong>Respects Permissions</strong> - Only shows what you can access</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Query -->
+            <div class="prompt-card glass-card">
+                <div class="prompt-header">
+                    <i class="fas fa-search"></i>
+                    <span>Example: Ask Rovo</span>
+                    <button class="copy-btn" onclick="copyPrompt(this)">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <div class="prompt-content">
+                    <p>"I am designing the 'Upload Invoice' flow:</p>
+                    <ul style="margin-top: 8px; margin-left: 16px; list-style: disc;">
+                        <li>What are the known API file size limits?</li>
+                        <li>Who is the Tech Lead for the 'Documents' service?</li>
+                        <li>Were there any previous attempts at this feature?"</li>
+                    </ul>
+                    <p style="margin-top: 16px; color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-info-circle" style="margin-right: 6px;"></i>Rovo searches across Jira, Confluence, and connected tools to find answers with citations.</p>
+                </div>
+            </div>
+
+            <!-- Keeping Confluence Fresh -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-top: 32px;">
+                <div style="margin-bottom: 20px;">
+                    <h3 style="font-size: 1.2rem; margin-bottom: 8px;"><i class="fas fa-sync-alt" style="color: var(--accent-primary); margin-right: 10px;"></i>Keeping Confluence Fresh</h3>
+                    <p style="color: var(--text-secondary);">Rovo is only as good as your documentation. For Confluence to become the place where you <em>find</em> information instead of where it goes to die, content must stay current.</p>
+                </div>
+                <div class="overview-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+                    <div>
+                        <h4 style="margin-bottom: 12px; font-size: 1rem; color: var(--text-primary);"><i class="fas fa-robot" style="color: var(--accent-tertiary); margin-right: 8px;"></i>Automate Content Lifecycle</h4>
+                        <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 1.9; font-size: 0.95rem;">
+                            <li><strong>Auto-archive stale pages</strong> - Archive pages not viewed in 180 days or not updated in 365 days</li>
+                            <li><strong>Review reminders</strong> - Send weekly notifications to page owners before archiving</li>
+                            <li><strong>Flag for review</strong> - Automatically add "requires review" labels to aging content</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 style="margin-bottom: 12px; font-size: 1rem; color: var(--text-primary);"><i class="fas fa-users-cog" style="color: var(--accent-tertiary); margin-right: 8px;"></i>Establish Ownership</h4>
+                        <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 1.9; font-size: 0.95rem;">
+                            <li><strong>Assign page owners</strong> - Every page needs someone responsible for its accuracy</li>
+                            <li><strong>Use review labels</strong> - Tag pages with "6 months" or "12 months" review cycles</li>
+                            <li><strong>Bulk cleanup</strong> - Use Content Manager to find and archive outdated pages</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-lightbulb" style="margin-right: 8px; color: var(--status-warning);"></i><strong>Pro tip:</strong> Confluence Automation (Premium) can handle this automatically. Without Premium, apps like Workflows for Confluence or Breeze provide similar capabilities.</p>
+                </div>
+            </div>
+
+            <!-- AI Tools for This Phase -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-top: 24px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 20px;"><i class="fas fa-wand-magic-sparkles" style="color: var(--accent-primary); margin-right: 10px;"></i>AI Tools for Initial Investigation</h3>
+
+                <!-- Internal Context -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-building" style="margin-right: 8px;"></i>Internal Context & History</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-search" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Rovo</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Atlassian · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Find technical constraints, API limits, and system owners instantly</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "What are the file size limits for [API]?" or "Who owns the [service] team?"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-users" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Copilot 365</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Capture stakeholder constraints and decisions from meetings</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Ask "What constraints did the tech lead mention?" after the meeting</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-chalkboard" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Miro AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Structure stakeholder input into journey maps and concept sketches</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Use "Create with AI" to generate diagrams from sticky notes</p>
+                    </div>
+                </div>
+
+                <!-- Competitor & Market Research -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-binoculars" style="margin-right: 8px;"></i>Competitor & Market Research</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Analyze competitor screenshots and summarize UX patterns</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Upload competitor screenshots: "Compare these approaches to [feature]"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-chart-line" style="color: var(--accent-tertiary); font-size: 1.2rem;"></i>
+                            <a href="https://www.kraftful.com/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Kraftful <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 10px;"><strong>Kraftful (Y Combinator)</strong> · Free tier / Pro from $15/mo</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Analyze competitor app reviews to find their UX pain points</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Import competitor app store reviews and surface common complaints</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-gem" style="color: var(--accent-tertiary); font-size: 1.2rem;"></i>
+                            <a href="https://gemini.google.com/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Gemini <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 10px;"><strong>Google</strong> · Free / Advanced $20/mo</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Deep Researcher for comprehensive competitor analysis with web access</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Research how [competitors] handle [feature] - include recent updates"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-brain" style="color: var(--accent-tertiary); font-size: 1.2rem;"></i>
+                            <a href="https://claude.ai/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Claude AI <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 10px;"><strong>Anthropic</strong> · Free / Pro $20/mo</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Long-context analysis for synthesizing research docs and interview transcripts</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Upload multiple PDFs: "Synthesize key themes across these research docs"</p>
+                    </div>
+                </div>
+
+                <!-- User Research & Personas -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-user-circle" style="margin-right: 8px;"></i>User Research & Personas</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fab fa-figma" style="color: var(--status-warning); font-size: 1.2rem;"></i>
+                            <a href="https://www.figma.com/community/plugin/1189158575928509194" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">QoQo.ai <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 6px;"><strong>QoQo (Figma plugin)</strong> · $15/mo or $7/mo yearly</p>
+                        <p style="color: var(--status-warning); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-exclamation-triangle" style="margin-right: 4px;"></i>Malaysia jurisdiction · Uses OpenAI · Use with caution</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Generate user personas, journey maps, and pain points from research notes</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Paste interview notes; AI creates structured personas directly in Figma</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-microphone" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <a href="https://www.looppanel.com/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Looppanel <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 6px;"><strong>Looppanel Inc. (India)</strong> · From $30/mo (15-day free trial)</p>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>SOC 2 Type II · GDPR · US/EU data centers</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Auto-transcribe user interviews with AI-generated notes and tagging</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Record interviews; AI highlights key moments and creates summaries</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-layer-group" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <a href="https://www.notably.ai/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Notably <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 6px;"><strong>Notably (Florida, USA)</strong> · Free tier / From $15/mo</p>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>USA (Delaware corp) · GDPR compliant</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Synthesize qualitative research data and auto-surface themes</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Import research notes; AI clusters insights and identifies patterns</p>
+                    </div>
+                </div>
+
+                <!-- Feedback Analysis -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-comments" style="margin-right: 8px;"></i>Existing Feedback Analysis</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-inbox" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <a href="https://www.kraftful.com/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Kraftful <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 6px;"><strong>Kraftful (San Francisco)</strong> · Free tier / Pro from $15/mo</p>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Y Combinator backed · USA · Now owned by Amplitude</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Synthesize existing user feedback from support tickets, surveys, app reviews</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Connect feedback sources; AI categorizes and ranks issues by frequency</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-scale-balanced" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <a href="https://insight7.io/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Insight7 <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 6px;"><strong>Insight7 (USA)</strong> · Free tier / Pro $99/mo</p>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>SOC 2 · GDPR · HIPAA · AWS hosted</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Analyze multiple interviews at scale to find cross-user patterns</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Upload transcripts; AI identifies common pain points and opportunities</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 12px 16px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid var(--status-success);">
+                    <p style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-shield-alt" style="margin-right: 8px;"></i><strong>Security verified:</strong> Looppanel, Notably, Kraftful, and Insight7 all have strong security certifications (SOC 2, GDPR). QoQo.ai is based in Malaysia - use with caution for sensitive research data.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Research Phase -->
+        <section class="page" id="research">
+            <div class="page-header">
+                <h1>Research</h1>
+                <p class="subtitle">User research, competitor analysis, and market insights</p>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 32px;">
+                <div class="overview-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-exclamation-circle" style="color: var(--status-warning); margin-right: 8px;"></i>The Challenge</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">Research is time-intensive: recruiting participants, conducting interviews, analyzing transcripts, synthesizing findings, and monitoring competitors. This often gets rushed or skipped.</p>
+
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-lightbulb" style="color: var(--accent-tertiary); margin-right: 8px;"></i>The Solution</h3>
+                        <p style="color: var(--text-secondary);">Use AI to accelerate research tasks: automate transcript analysis, generate interview guides, synthesize patterns across studies, and monitor competitor changes.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-tasks" style="color: var(--status-success); margin-right: 8px;"></i>What Research Involves</h3>
+                        <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 2;">
+                            <li><strong>User Interviews</strong> - Conduct and analyze 1:1 sessions</li>
+                            <li><strong>Surveys</strong> - Design questions, analyze responses</li>
+                            <li><strong>Competitor Analysis</strong> - Monitor and compare alternatives</li>
+                            <li><strong>Market Research</strong> - Understand trends and opportunities</li>
+                            <li><strong>Synthesis</strong> - Find patterns across data sources</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Research Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 24px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 20px;"><i class="fas fa-user-friends" style="color: var(--accent-primary); margin-right: 10px;"></i>User Research</h3>
+
+                <!-- Interview Preparation -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-clipboard-list" style="margin-right: 8px;"></i>Interview Preparation</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Generate interview guides and discussion questions based on research objectives</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Create a 45-minute interview guide for understanding how users manage invoices, including warm-up and probing questions"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-brain" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Claude</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Trusted · Anthropic · SOC 2 · GDPR</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Create screener surveys and participant criteria</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Write a screener survey to recruit finance professionals who process 50+ invoices/month"</p>
+                    </div>
+                </div>
+
+                <!-- Transcript Analysis -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-file-audio" style="margin-right: 8px;"></i>Transcript Analysis</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-users" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Copilot 365</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Auto-transcribe Teams interviews with speaker identification</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Enable transcription in Teams; ask Copilot "What were the main pain points mentioned?"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-wave-square" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Looppanel</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Trusted · SOC 2 Type II · GDPR</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Purpose-built for UX research - auto-tags themes and generates highlight reels</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Upload recordings; AI creates timestamped notes and theme clusters</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-highlighter" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Notably</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Trusted · USA · GDPR compliant</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> AI-powered tagging and pattern detection across multiple interviews</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Import transcripts; use AI to identify recurring themes and outliers</p>
+                    </div>
+                </div>
+
+                <!-- Research Synthesis -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-layer-group" style="margin-right: 8px;"></i>Research Synthesis</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Synthesize findings into personas, journey maps, and insight reports</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Based on these 8 interview summaries, create 3 distinct user personas with goals, frustrations, and behaviors"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-chalkboard" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Miro AI</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Visualize research findings as affinity diagrams and journey maps</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Paste findings as sticky notes; use AI to cluster into themes and generate diagrams</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor Analysis Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 24px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 20px;"><i class="fas fa-binoculars" style="color: var(--accent-primary); margin-right: 10px;"></i>Competitor & Market Research</h3>
+
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Analyze competitor screenshots and identify UX patterns</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Compare these 5 competitor invoice upload flows. What patterns do they share? What's unique?"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-gem" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Gemini</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Trusted · Google · SOC 2 · ISO 27001</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Strong multimodal analysis - can read and compare multiple screenshots</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Upload competitor screenshots; ask "Create a feature comparison matrix"</p>
+                    </div>
+                </div>
+
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-brain" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Claude</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Trusted · Anthropic · SOC 2 · GDPR</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Deep analysis of market reports and trend documents</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Summarize these 3 industry reports. What are the key trends affecting invoice processing?"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-search" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Rovo</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Atlassian · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Find past competitor analyses and market research in Confluence</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "What competitor analyses exist for [product area]? Who conducted them?"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Survey Design Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 24px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 20px;"><i class="fas fa-poll" style="color: var(--accent-primary); margin-right: 10px;"></i>Survey Design & Analysis</h3>
+
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Design unbiased survey questions and analyze open-ended responses</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Create a 10-question NPS follow-up survey. Avoid leading questions. Include a mix of Likert scale and open-ended."</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-brain" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Claude</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Trusted · Anthropic · SOC 2 · GDPR</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Categorize and analyze hundreds of open-ended survey responses</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Paste responses; ask "Categorize these into themes and summarize the top 5 insights with supporting quotes"</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Prompts -->
+            <div class="prompt-card glass-card">
+                <div class="prompt-header">
+                    <i class="fas fa-lightbulb"></i>
+                    <span>Research Prompt Examples</span>
+                    <button class="copy-btn" onclick="copyPrompt(this)" aria-label="Copy prompt">
+                        <i class="fas fa-copy" aria-hidden="true"></i>
+                    </button>
+                </div>
+                <div class="prompt-content">
+                    <p><strong>Interview Guide:</strong></p>
+                    <p style="margin-left: 16px; color: var(--text-muted);">"Create a 45-minute semi-structured interview guide about invoice management. Include: warm-up questions, core exploration, task-based scenarios, and wrap-up. Focus on pain points and workarounds."</p>
+
+                    <p style="margin-top: 16px;"><strong>Transcript Synthesis:</strong></p>
+                    <p style="margin-left: 16px; color: var(--text-muted);">"I'm attaching summaries from 6 user interviews. Identify: (1) The top 5 recurring pain points with frequency, (2) Any surprising outliers, (3) Quotes that best illustrate each pain point."</p>
+
+                    <p style="margin-top: 16px;"><strong>Competitor Analysis:</strong></p>
+                    <p style="margin-left: 16px; color: var(--text-muted);">"Analyze these screenshots of [Competitor A, B, C]'s file upload flows. Create a comparison table covering: upload methods, file type support, progress feedback, error handling, and accessibility features."</p>
+
+                    <p style="margin-top: 16px;"><strong>Persona Creation:</strong></p>
+                    <p style="margin-left: 16px; color: var(--text-muted);">"Based on our research findings, create 3 distinct user personas. For each include: demographics, goals, frustrations, tech comfort level, and a day-in-the-life scenario."</p>
+                </div>
+            </div>
+
+            <!-- Tips -->
+            <div style="margin-top: 24px; padding: 16px 20px; background: rgba(255,255,255,0.03); border-radius: 12px; border-left: 3px solid var(--status-warning);">
+                <p style="color: var(--text-secondary); font-size: 0.9rem;"><i class="fas fa-lightbulb" style="margin-right: 8px; color: var(--status-warning);"></i><strong>Research ethics reminder:</strong> AI can help analyze research data, but never share raw participant data (names, contact info, sensitive details) with external AI tools. Anonymize data first, or use fully trusted internal tools.</p>
+            </div>
+        </section>
+
+        <!-- Phase 3: Wireframing -->
+        <section class="page" id="phase3">
+            <div class="page-header">
+                <h1>Wireframing & Prototyping</h1>
+                <p class="subtitle">Generate first drafts faster</p>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 32px;">
+                <div class="overview-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-exclamation-circle" style="color: var(--status-warning); margin-right: 8px;"></i>The Challenge</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">Starting from a blank canvas takes time. Creating multiple layout options to explore can be tedious.</p>
+
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-lightbulb" style="color: var(--accent-tertiary); margin-right: 8px;"></i>The Solution</h3>
+                        <p style="color: var(--text-secondary);">Use AI to generate initial wireframes and layouts as a starting point. You refine and adapt them to fit your actual needs.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-tools" style="color: var(--status-success); margin-right: 8px;"></i>Recommended Tools</h3>
+                        <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 2;">
+                            <li><strong>Figma AI</strong> - "First Draft" for quick wireframes</li>
+                            <li><strong>Relume</strong> - Sitemaps and page structures</li>
+                            <li><strong>Wireframe Designer</strong> - Component layouts</li>
+                            <li><strong>Claude</strong> - Code prototypes (external only)</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,0.1);">
+                    <p style="color: var(--text-muted); font-size: 0.9rem;"><i class="fas fa-info-circle" style="margin-right: 8px;"></i><strong>Remember:</strong> AI-generated wireframes are conversation starters, not final designs. Your design expertise shapes the final result.</p>
+                </div>
+            </div>
+
+            <!-- Two Column: Figma vs External -->
+            <div class="two-column">
+                <div class="prompt-card glass-card">
+                    <div class="prompt-header">
+                        <i class="fab fa-figma"></i>
+                        <span>In Figma (Company Confidential)</span>
+                    </div>
+                    <div class="prompt-content">
+                        <p style="margin-bottom: 12px;"><strong>Figma AI "Make" feature:</strong></p>
+                        <p>"Create a mobile wireframe for a document upload flow with drag-and-drop, file type validation, and progress indicator"</p>
+                        <p style="margin-top: 16px; color: var(--text-muted); font-size: 0.85rem;">Safe for internal designs and proprietary flows</p>
+                    </div>
+                </div>
+
+                <div class="prompt-card glass-card">
+                    <div class="prompt-header">
+                        <i class="fas fa-code"></i>
+                        <span>External AI (Generic patterns only)</span>
+                    </div>
+                    <div class="prompt-content">
+                        <p style="margin-bottom: 12px;"><strong>Claude for code prototypes:</strong></p>
+                        <p>"Write React/Tailwind code for a generic file upload component with drag-and-drop"</p>
+                        <p style="margin-top: 16px; color: var(--text-muted); font-size: 0.85rem;">Only use for generic UI patterns - no proprietary info</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Tools for This Phase -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-top: 24px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 20px;"><i class="fas fa-wand-magic-sparkles" style="color: var(--accent-primary); margin-right: 10px;"></i>AI Tools for Wireframing</h3>
+
+                <!-- Core Wireframing -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-pencil-ruler" style="margin-right: 8px;"></i>Core Wireframing & Layouts</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fab fa-figma" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Figma AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Generate low-fidelity layouts and component placement directly in your design tool</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> "Make a settings page with profile, notifications, and privacy sections"</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Generate responsive variants from desktop designs</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-chalkboard" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Miro AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Convert brainstorm notes into sitemaps, IA diagrams, and user flows</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> Paste sticky notes and ask "Create a sitemap from these page ideas"</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Auto-structure hierarchies, generate connected flowcharts</p>
+                    </div>
+                </div>
+
+                <!-- Content & Copy -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-font" style="margin-right: 8px;"></i>Content & Microcopy</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fab fa-figma" style="color: var(--status-warning); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Figma AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Generate realistic placeholder content that fits your context (not lorem ipsum)</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Select text layer → "Generate realistic content for a finance dashboard"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-brain" style="color: var(--status-warning); font-size: 1.2rem;"></i>
+                            <a href="https://claude.ai/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Claude AI <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 10px;"><strong>Anthropic</strong> · Free / Pro $20/mo · <em>Generic patterns only</em></p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Write button labels, error messages, and UX microcopy with rationale</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Write friendly error messages for form validation - include empty, invalid format, too long"</p>
+                    </div>
+                </div>
+
+                <!-- Validation & Review -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-check-double" style="margin-right: 8px;"></i>Validation & Review</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-chalkboard" style="color: var(--accent-tertiary); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Miro AI Sidekicks</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Get AI personas to critique wireframes and ask challenging questions</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Use "Product Leader" sidekick to review layout and challenge assumptions</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Upload wireframe screenshots for heuristic review</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Review this wireframe against Nielsen's 10 usability heuristics"</p>
+                    </div>
+                </div>
+
+                <!-- Design System -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-layer-group" style="margin-right: 8px;"></i>Design System & Accessibility</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fab fa-figma" style="color: var(--accent-primary); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Figma AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Auto-rename layers, identify repeated components, check contrast</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Select frame → "Rename layers" or use built-in accessibility checker</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-brain" style="color: var(--accent-primary); font-size: 1.2rem;"></i>
+                            <a href="https://claude.ai/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Claude AI <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 10px;"><strong>Anthropic</strong> · Free / Pro $20/mo · <em>Generic patterns only</em></p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Document component behavior specs for handoff</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Document the behavior specs for a dropdown: states, keyboard nav, ARIA"</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 12px 16px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid var(--status-warning);">
+                    <p style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-shield-alt" style="margin-right: 8px;"></i><strong>Security reminder:</strong> Use Figma AI and Miro AI for proprietary designs. External AI (Claude/ChatGPT) only for generic patterns without company-specific details.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 4: UI Flows -->
+        <section class="page" id="phase4">
+            <div class="page-header">
+                <h1>UI Flows & Edge Cases</h1>
+                <p class="subtitle">Think through the "rainy day" scenarios</p>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 32px;">
+                <div class="overview-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-exclamation-circle" style="color: var(--status-warning); margin-right: 8px;"></i>The Challenge</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">Mapping out error cases, edge cases, and "rainy day" scenarios is time-consuming but critical. It's easy to miss important states.</p>
+
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-lightbulb" style="color: var(--accent-tertiary); margin-right: 8px;"></i>The Solution</h3>
+                        <p style="color: var(--text-secondary);">Use AI as a "pessimist" to help identify edge cases and error states you might have missed. Generate the logic flow <em>before</em> drawing arrows.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-diagram-project" style="color: var(--status-success); margin-right: 8px;"></i>Pro Tip: Mermaid.js</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 16px;">Ask Chat GNPT to output flowcharts in Mermaid.js syntax, then paste into:</p>
+                        <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 2;">
+                            <li>Draw.io / Diagrams.net</li>
+                            <li>Miro</li>
+                            <li>Notion</li>
+                            <li>GitHub markdown</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Prompt -->
+            <div class="prompt-card glass-card">
+                <div class="prompt-header">
+                    <i class="fas fa-terminal"></i>
+                    <span>Example: Edge Case Discovery</span>
+                    <button class="copy-btn" onclick="copyPrompt(this)">
+                        <i class="fas fa-copy"></i>
+                    </button>
+                </div>
+                <div class="prompt-content">
+                    <p>"I am designing the 'Password Reset' flow. The happy path is successful reset.</p>
+                    <ul style="margin-top: 12px; margin-left: 16px; list-style: disc;">
+                        <li>List 10 edge cases and error states I should consider</li>
+                        <li>Include things like: weak password, no network, expired link, server timeout</li>
+                        <li>Output as a text-based flow diagram in Mermaid.js syntax"</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- AI Tools for This Phase -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-top: 24px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 20px;"><i class="fas fa-wand-magic-sparkles" style="color: var(--accent-primary); margin-right: 10px;"></i>AI Tools for UI Flows & Edge Cases</h3>
+
+                <!-- Edge Case Discovery -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-search" style="margin-right: 8px;"></i>Edge Case Discovery</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Use AI as a "pessimist" to brainstorm edge cases you might miss</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "List 15 edge cases for a file upload flow - include errors, limits, permissions"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-chalkboard" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Miro AI Sidekicks</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Get AI personas to critique your flows and find gaps</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Use "QA Engineer" sidekick to review: "What edge cases am I missing?"</p>
+                    </div>
+                </div>
+
+                <!-- Flow Visualization -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-project-diagram" style="margin-right: 8px;"></i>Flow Visualization</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-chalkboard" style="color: var(--status-warning); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Miro AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Auto-generate flowcharts from text descriptions</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> Paste flow description → "Create a flowchart with decision points"</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> State transition diagrams, permission flow maps</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-brain" style="color: var(--status-warning); font-size: 1.2rem;"></i>
+                            <a href="https://claude.ai/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Claude AI <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 10px;"><strong>Anthropic</strong> · Free / Pro $20/mo · <em>Generic patterns only</em></p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Generate Mermaid.js syntax for developer-friendly flow diagrams</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Output this flow as Mermaid.js - include error branches"</p>
+                    </div>
+                </div>
+
+                <!-- State Design -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-layer-group" style="margin-right: 8px;"></i>State Design (Error, Empty, Loading)</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fab fa-figma" style="color: var(--accent-tertiary); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Figma AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Generate UI variants for error, empty, and loading states</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> "Create error state variant" or "Add loading skeleton to this list"</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> First-time user states, permission denied screens</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 8px;">
+                            <i class="fas fa-brain" style="color: var(--accent-tertiary); font-size: 1.2rem;"></i>
+                            <a href="https://claude.ai/" target="_blank" style="color: var(--text-primary); text-decoration: none; font-weight: 600;">Claude AI <i class="fas fa-external-link-alt" style="font-size: 0.7rem; margin-left: 4px;"></i></a>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.75rem; margin-bottom: 10px;"><strong>Anthropic</strong> · Free / Pro $20/mo · <em>Generic patterns only</em></p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Write user-friendly error messages for each scenario</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Write error messages for: timeout, no permission, file too large, offline"</p>
+                    </div>
+                </div>
+
+                <!-- Interruption Handling -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-exclamation-triangle" style="margin-right: 8px;"></i>Interruption & Recovery</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr);">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Brainstorm interruption scenarios and recovery paths</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "What happens if user: hits back, loses connection, opens in new tab, session expires?"</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-chalkboard" style="color: var(--accent-primary); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Miro AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Visualize state transitions and recovery flows</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Create state diagram showing normal flow + interruption recovery paths"</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 20px; padding: 12px 16px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid var(--accent-tertiary);">
+                    <p style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-diagram-project" style="margin-right: 8px;"></i><strong>Workflow tip:</strong> Generate logic flows in Miro first (text → diagram), then design the UI states in Figma. This ensures you don't miss edge cases.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Phase 5: Handover -->
+        <section class="page" id="phase5">
+            <div class="page-header">
+                <h1>Handover & Documentation</h1>
+                <p class="subtitle">Automate the administrative burden</p>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 32px;">
+                <div class="overview-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-exclamation-circle" style="color: var(--status-warning); margin-right: 8px;"></i>The Challenge</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 24px;">"Why did you do it this way?" questions keep coming up. Writing test cases and documentation is tedious but necessary.</p>
+
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-lightbulb" style="color: var(--accent-tertiary); margin-right: 8px;"></i>The Solution</h3>
+                        <p style="color: var(--text-secondary);">Use AI to help document decisions and generate test cases from your flow descriptions. You review and adjust - AI handles the formatting.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-check-circle" style="color: var(--status-success); margin-right: 8px;"></i>Use Cases</h3>
+                        <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 2;">
+                            <li>Design Decision Records (DDRs)</li>
+                            <li>Gherkin test cases (Given/When/Then)</li>
+                            <li>Meeting summaries to ADO</li>
+                            <li>Handoff documentation</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Two Column: Documentation vs QA -->
+            <div class="two-column">
+                <div class="prompt-card glass-card">
+                    <div class="prompt-header">
+                        <i class="fas fa-file-alt"></i>
+                        <span>Design Decision Record</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="prompt-content">
+                        <p>"Summarize this design decision:</p>
+                        <ul style="margin-top: 8px; margin-left: 16px; list-style: disc;">
+                            <li>We chose Modal over Page navigation</li>
+                            <li>Reason: Tech Lead said router was too heavy</li>
+                            <li>Format as a Design Decision Record"</li>
+                        </ul>
+                        <p style="margin-top: 16px; color: var(--status-success); font-size: 0.85rem;"><i class="fas fa-arrow-right" style="margin-right: 6px;"></i>Paste into ADO</p>
+                    </div>
+                </div>
+
+                <div class="prompt-card glass-card">
+                    <div class="prompt-header">
+                        <i class="fas fa-vial"></i>
+                        <span>QA Test Cases</span>
+                        <button class="copy-btn" onclick="copyPrompt(this)">
+                            <i class="fas fa-copy"></i>
+                        </button>
+                    </div>
+                    <div class="prompt-content">
+                        <p>"Convert this flow into test cases:</p>
+                        <ul style="margin-top: 8px; margin-left: 16px; list-style: disc;">
+                            <li>[Paste your flow description]</li>
+                            <li>Use Gherkin syntax (Given/When/Then)</li>
+                            <li>Include happy path and error states"</li>
+                        </ul>
+                        <p style="margin-top: 16px; color: var(--status-success); font-size: 0.85rem;"><i class="fas fa-arrow-right" style="margin-right: 6px;"></i>Paste into Test Plan</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Tools for This Phase -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-top: 24px;">
+                <h3 style="font-size: 1.1rem; margin-bottom: 20px;"><i class="fas fa-wand-magic-sparkles" style="color: var(--accent-primary); margin-right: 10px;"></i>AI Tools for Handover & Documentation</h3>
+
+                <!-- Meeting Documentation -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-video" style="margin-right: 8px;"></i>Meeting Documentation</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-users" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Copilot 365</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Auto-generate meeting summaries and capture design review decisions</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> After design reviews, ask "Summarize decisions and action items"</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> "What feedback did [stakeholder] give?" - instant recall from transcripts</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-file-lines" style="color: var(--status-warning); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Fireflies.ai</strong>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 4px;">Fireflies.ai Inc. (USA) · Free tier / Pro from $10/mo</p>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 4px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>SOC 2 Type II · GDPR · HIPAA</p>
+                        <p style="color: var(--status-warning); font-size: 0.7rem; margin-bottom: 4px;"><i class="fas fa-exclamation-triangle" style="margin-right: 4px;"></i>US servers only · Ensure participant consent</p>
+                        <a href="https://fireflies.ai" target="_blank" style="color: var(--accent-primary); font-size: 0.8rem; text-decoration: none;">fireflies.ai <i class="fas fa-external-link-alt" style="font-size: 0.7rem;"></i></a>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 8px; margin-bottom: 8px;"><strong>Why:</strong> Auto-transcribe and summarize design critiques, stakeholder feedback sessions</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> Integrates with Teams/Zoom to capture and organize all meeting insights</p>
+                    </div>
+                </div>
+
+                <!-- Test Case Generation -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-vial" style="margin-right: 8px;"></i>Test Case Generation</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fab fa-microsoft" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">ADO + Copilot</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Generate test cases from User Stories and acceptance criteria</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> Use MCP to "Generate test cases from this User Story" in Gherkin format</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Auto-generate PR descriptions, summarize work item discussions</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Generate comprehensive test scenarios from flow descriptions</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> "Create Gherkin test cases for [feature] including edge cases"</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Generate accessibility test checklists from component specs</p>
+                    </div>
+                </div>
+
+                <!-- Design Specs & Developer Handoff -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-code" style="margin-right: 8px;"></i>Design Specs & Developer Handoff</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 24px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fab fa-figma" style="color: #F24E1E; font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Figma AI</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Auto-generate component specs, spacing values, and code snippets</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> Use Dev Mode AI features to extract implementation details</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Generate CSS/React code from design components</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-brain" style="color: #D97706; font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Claude AI</strong>
+                        </div>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 4px;">Anthropic · Free / Pro $20/mo</p>
+                        <a href="https://claude.ai" target="_blank" style="color: var(--accent-primary); font-size: 0.8rem; text-decoration: none;">claude.ai <i class="fas fa-external-link-alt" style="font-size: 0.7rem;"></i></a>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 8px; margin-bottom: 8px;"><strong>Why:</strong> Write detailed technical handoff docs explaining design decisions</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>How:</strong> "Document this component's behavior, states, and interaction patterns"</p>
+                    </div>
+                </div>
+
+                <!-- Release Notes & Change Documentation -->
+                <h4 style="font-size: 0.95rem; margin-bottom: 16px; color: var(--text-muted);"><i class="fas fa-scroll" style="margin-right: 8px;"></i>Release Notes & Change Documentation</h4>
+                <div class="tools-grid" style="grid-template-columns: repeat(2, 1fr); margin-bottom: 16px;">
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-comment-dots" style="color: var(--status-success); font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Chat GNPT</strong>
+                        </div>
+                        <p style="color: var(--status-success); font-size: 0.7rem; margin-bottom: 10px;"><i class="fas fa-shield-alt" style="margin-right: 4px;"></i>Fully trusted · Internal AI</p>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Generate user-facing release notes from technical change lists</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> "Convert these ADO work items into customer-friendly release notes"</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Create internal changelog entries, migration guides</p>
+                    </div>
+                    <div style="padding: 16px; background: rgba(255,255,255,0.05); border-radius: 12px;">
+                        <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 12px;">
+                            <i class="fas fa-file-word" style="color: #2B579A; font-size: 1.2rem;"></i>
+                            <strong style="color: var(--text-primary);">Copilot in Word</strong>
+                        </div>
+                        <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 8px;"><strong>Why:</strong> Draft formal design documentation and specification sheets</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem; margin-bottom: 8px;"><strong>How:</strong> "Create a design spec document from these bullet points"</p>
+                        <p style="color: var(--text-muted); font-size: 0.8rem;"><strong>Also:</strong> Format existing docs, generate table of contents, summarize long specs</p>
+                    </div>
+                </div>
+
+                <div style="margin-top: 16px; padding: 12px 16px; background: rgba(255,255,255,0.03); border-radius: 8px; border-left: 3px solid var(--status-success);">
+                    <p style="color: var(--text-muted); font-size: 0.85rem;"><i class="fas fa-clock" style="margin-right: 8px;"></i><strong>Time saver:</strong> Design Review → Copilot summary → Paste to ADO → AI generates test cases → Claude writes handoff docs. What used to take hours now takes minutes.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agents Page -->
+        <section class="page" id="agents">
+            <div class="page-header">
+                <h1>AI Agents to Build</h1>
+                <p class="subtitle">Future infrastructure for Chat GNPT</p>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 32px;">
+                <div class="overview-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: start;">
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-robot" style="color: var(--accent-tertiary); margin-right: 8px;"></i>What are RAG Agents?</h3>
+                        <p style="color: var(--text-secondary);">RAG (Retrieval-Augmented Generation) connects AI to your internal data sources. This allows Chat GNPT to answer questions using your actual ADO data, wikis, and documentation.</p>
+                    </div>
+                    <div>
+                        <h3 style="margin-bottom: 16px; font-size: 1.1rem;"><i class="fas fa-cogs" style="color: var(--status-success); margin-right: 8px;"></i>Required from IT/Engineering</h3>
+                        <ul style="color: var(--text-secondary); margin-left: 20px; line-height: 2;">
+                            <li>Microsoft Graph API connections</li>
+                            <li>ADO Work Items indexing</li>
+                            <li>Wiki/Confluence indexing</li>
+                            <li>Design System documentation feed</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Three Agent Cards -->
+            <div class="agents-grid">
+                <div class="agent-card glass-card">
+                    <div class="agent-header">
+                        <div class="agent-icon">
+                            <i class="fas fa-sitemap"></i>
+                        </div>
+                        <span class="agent-label">Agent A</span>
+                    </div>
+                    <h3>The Org Navigator</h3>
+                    <p class="agent-goal"><strong>Goal:</strong> Answer "Who owns the Payment API?"</p>
+                    <div class="agent-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Data Source</span>
+                            <p>Microsoft Graph API + ADO Area Paths</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agent-card glass-card">
+                    <div class="agent-header">
+                        <div class="agent-icon">
+                            <i class="fas fa-history"></i>
+                        </div>
+                        <span class="agent-label">Agent B</span>
+                    </div>
+                    <h3>The Product Historian</h3>
+                    <p class="agent-goal"><strong>Goal:</strong> Answer "Why did we cancel this feature?"</p>
+                    <div class="agent-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Data Source</span>
+                            <p>ADO Work Items (History) + Wiki/Confluence</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="agent-card glass-card">
+                    <div class="agent-header">
+                        <div class="agent-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <span class="agent-label">Agent C</span>
+                    </div>
+                    <h3>The Spec Defender</h3>
+                    <p class="agent-goal"><strong>Goal:</strong> Check copy against brand guidelines</p>
+                    <div class="agent-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Data Source</span>
+                            <p>Design System Docs + Brand Voice Guidelines</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Checklist Page -->
+        <section class="page" id="checklist">
+            <div class="page-header">
+                <h1>When to Use / Not Use AI</h1>
+                <p class="subtitle">Know where AI helps and where it doesn't</p>
+            </div>
+
+            <!-- Overview Section -->
+            <div class="phase-overview glass-card" style="padding: 32px; margin-bottom: 32px;">
+                <p style="color: var(--text-secondary); font-size: 1.05rem; text-align: center;">AI is powerful for structured, repetitive, and exploratory tasks. It struggles with empathy, novelty, and precision. Use this guide to decide when to reach for AI and when to rely on your expertise.</p>
+            </div>
+
+            <!-- Two Column Checklist -->
+            <div class="two-column">
+                <div class="checklist-section do glass-card">
+                    <div class="checklist-header">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>When to Use AI</h3>
+                    </div>
+                    <ul class="checklist-items" style="font-size: 0.9rem;">
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Thinking partner</strong> <span>- Structure ideas and find gaps</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Ideation</strong> <span>- Generate layout variations</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Repetitive tasks</strong> <span>- Rename layers, fill mock data</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Edge cases</strong> <span>- Find error states you missed</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Documentation</strong> <span>- Format decisions and test cases</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Context lookup</strong> <span>- Find owners and history</span></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="checklist-section dont glass-card">
+                    <div class="checklist-header">
+                        <i class="fas fa-times-circle"></i>
+                        <h3>When NOT to Use AI</h3>
+                    </div>
+                    <ul class="checklist-items" style="font-size: 0.9rem;">
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>User empathy</strong> <span>- AI hallucinates emotions</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Visual polish</strong> <span>- Humans must pixel-peep</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Novel interactions</strong> <span>- AI gives generic patterns</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Technical facts</strong> <span>- Always verify with devs</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Final decisions</strong> <span>- You own the outcome</span></div>
+                        </li>
+                        <li>
+                            <i class="fas fa-square"></i>
+                            <div><strong>Confidential data</strong> <span>- Use internal tools only</span></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Overview Page -->
+        <section class="page" id="team-overview">
+            <div class="page-header">
+                <h1>Team AI Competency</h1>
+                <p class="subtitle">Track UX designers' AI adoption progress</p>
+            </div>
+            <div id="team-overview-content">
+                <!-- Content loaded dynamically by designers.js -->
+                <div class="loading-state glass-card">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading team data...</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Designer Profile Page -->
+        <section class="page" id="designer-profile">
+            <div id="designer-profile-content">
+                <!-- Content loaded dynamically by designers.js -->
+                <div class="loading-state glass-card">
+                    <i class="fas fa-spinner fa-spin"></i>
+                    <p>Loading designer profile...</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Add/Edit Designer Modal -->
+    <div class="modal-overlay" id="designer-modal">
+        <div class="modal-content glass-card">
+            <div class="modal-header">
+                <h2 id="modal-title">Add Designer</h2>
+                <button class="modal-close" onclick="closeModal()">&times;</button>
+            </div>
+            <form id="designer-form" onsubmit="handleDesignerSubmit(event)">
+                <div class="form-section">
+                    <h3>Basic Info</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="designer-name">Name</label>
+                            <input type="text" id="designer-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="designer-team">Team</label>
+                            <input type="text" id="designer-team" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="designer-interview-date">Interview Date</label>
+                        <input type="date" id="designer-interview-date" required>
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Tool Proficiency</h3>
+                    <div class="tool-proficiency-form" id="tool-proficiency-inputs">
+                        <!-- Generated dynamically -->
+                    </div>
+                </div>
+
+                <div class="form-section">
+                    <h3>Pain Points</h3>
+                    <div id="pain-points-list" class="dynamic-list">
+                        <!-- Generated dynamically -->
+                    </div>
+                    <button type="button" class="add-list-item-btn" onclick="addPainPoint()">+ Add Pain Point</button>
+                </div>
+
+                <div class="form-section">
+                    <h3>Goals</h3>
+                    <div id="goals-list" class="dynamic-list">
+                        <!-- Generated dynamically -->
+                    </div>
+                    <button type="button" class="add-list-item-btn" onclick="addGoal()">+ Add Goal</button>
+                </div>
+
+                <div class="form-section">
+                    <h3>Action Items</h3>
+                    <div id="action-items-list" class="dynamic-list">
+                        <!-- Generated dynamically -->
+                    </div>
+                    <button type="button" class="add-list-item-btn" onclick="addActionItem()">+ Add Action Item</button>
+                </div>
+
+                <div class="form-section">
+                    <h3>Key Insight</h3>
+                    <div class="form-group">
+                        <textarea id="designer-insight" rows="3" placeholder="Main takeaway from the interview..."></textarea>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Save Designer</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Note Modal -->
+    <div class="modal-overlay" id="note-modal">
+        <div class="modal-content glass-card small">
+            <div class="modal-header">
+                <h2>Add Progress Note</h2>
+                <button class="modal-close" onclick="closeNoteModal()">&times;</button>
+            </div>
+            <form id="note-form" onsubmit="handleNoteSubmit(event)">
+                <input type="hidden" id="note-designer-id">
+                <div class="form-group">
+                    <label for="note-content">Note</label>
+                    <textarea id="note-content" rows="4" required placeholder="Progress update..."></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeNoteModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Add Note</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Add Action Modal -->
+    <div class="modal-overlay" id="action-modal">
+        <div class="modal-content glass-card small">
+            <div class="modal-header">
+                <h2>Add Action Item</h2>
+                <button class="modal-close" onclick="closeActionModal()">&times;</button>
+            </div>
+            <form id="action-form" onsubmit="handleActionSubmit(event)">
+                <input type="hidden" id="action-designer-id">
+                <div class="form-group">
+                    <label for="action-content">Action</label>
+                    <input type="text" id="action-content" required placeholder="What needs to be done...">
+                </div>
+                <div class="form-group">
+                    <label for="action-owner">Owner</label>
+                    <select id="action-owner" required>
+                        <option value="daniel">Daniel</option>
+                        <option value="">Designer (will use their name)</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="btn-secondary" onclick="closeActionModal()">Cancel</button>
+                    <button type="submit" class="btn-primary">Add Action</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/designers.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

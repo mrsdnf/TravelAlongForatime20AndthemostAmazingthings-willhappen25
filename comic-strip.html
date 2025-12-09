@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX Discovers AI - Comic Strip</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f5f0e6;
+            min-height: 100vh;
+            padding: 20px;
+            font-family: 'Comic Neue', cursive;
+        }
+
+        .comic-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border: 4px solid #000;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 8px 8px 0 rgba(0,0,0,0.3);
+        }
+
+        /* Comic Header */
+        .comic-header {
+            background: linear-gradient(135deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            padding: 30px 20px;
+            text-align: center;
+            border-bottom: 4px solid #000;
+            position: relative;
+        }
+
+        .comic-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(255,255,255,0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255,255,255,0.3) 0%, transparent 50%);
+        }
+
+        .comic-title {
+            font-family: 'Bangers', cursive;
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            color: #fff;
+            text-shadow:
+                4px 4px 0 #000,
+                -2px -2px 0 #000,
+                2px -2px 0 #000,
+                -2px 2px 0 #000,
+                0 4px 0 #000;
+            letter-spacing: 4px;
+            position: relative;
+            z-index: 1;
+            transform: rotate(-2deg);
+        }
+
+        .comic-subtitle {
+            font-family: 'Comic Neue', cursive;
+            font-size: 1.2rem;
+            color: #000;
+            margin-top: 10px;
+            position: relative;
+            z-index: 1;
+            font-weight: 700;
+        }
+
+        /* Comic Grid */
+        .comic-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0;
+        }
+
+        .comic-panel {
+            position: relative;
+            border: 3px solid #000;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .comic-panel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.3s ease;
+        }
+
+        .comic-panel:hover img {
+            transform: scale(1.02);
+        }
+
+        /* Panel numbers */
+        .panel-number {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background: #feca57;
+            color: #000;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Bangers', cursive;
+            font-size: 1.2rem;
+            border: 2px solid #000;
+            z-index: 10;
+        }
+
+        /* Caption boxes */
+        .caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(255, 255, 255, 0.95);
+            padding: 8px 12px;
+            font-size: 0.9rem;
+            font-weight: 700;
+            border-top: 2px solid #000;
+            text-align: center;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .comic-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .comic-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .comic-title {
+                letter-spacing: 2px;
+            }
+        }
+
+        /* Footer */
+        .comic-footer {
+            background: #000;
+            color: #fff;
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+        }
+
+        .comic-footer a {
+            color: #feca57;
+        }
+    </style>
+</head>
+<body>
+    <div class="comic-container">
+        <header class="comic-header">
+            <h1 class="comic-title">UX DISCOVERS AI</h1>
+            <p class="comic-subtitle">A designer's journey from frustration to collaboration</p>
+        </header>
+
+        <div class="comic-grid">
+            <!-- Row 1 -->
+            <div class="comic-panel">
+                <span class="panel-number">1</span>
+                <img src="images/panel-1-searching.png" alt="UX designer searching with magnifying glass, frustrated">
+                <div class="caption">The endless search for requirements...</div>
+            </div>
+
+            <div class="comic-panel">
+                <span class="panel-number">2</span>
+                <img src="images/panel-2-collaboration.png" alt="UX designer collaborating with developers">
+                <div class="caption">Trying to align with the dev team</div>
+            </div>
+
+            <div class="comic-panel">
+                <span class="panel-number">3</span>
+                <img src="images/panel-3-magic.png" alt="UX designer experiencing AI magic moment">
+                <div class="caption">Wait... what if AI could help?</div>
+            </div>
+
+            <!-- Row 2 -->
+            <div class="comic-panel">
+                <span class="panel-number">4</span>
+                <img src="images/panel-4-lightbulb.png" alt="UX designer having lightbulb moment with AI">
+                <div class="caption">The lightbulb moment!</div>
+            </div>
+
+            <div class="comic-panel">
+                <span class="panel-number">5</span>
+                <img src="images/panel-5-happy.png" alt="UX designer happy working with AI">
+                <div class="caption">AI as a creative partner</div>
+            </div>
+
+            <div class="comic-panel">
+                <span class="panel-number">6</span>
+                <img src="images/panel-6-ai-assist.png" alt="UX designer efficiently working with AI assistance">
+                <div class="caption">Designing smarter, not harder</div>
+            </div>
+        </div>
+
+        <footer class="comic-footer">
+            Created with Ligne Claire style illustrations | AI + UX Adoption Strategy 2024
+        </footer>
+    </div>
+</body>
+</html>
