@@ -37,15 +37,18 @@ const STATUS = {
 // Data storage
 let designersData = { designers: [] };
 
-// Load data from JSON file
+// Load data from Supabase
 async function loadDesignersData() {
   try {
-    const response = await fetch('data/designers.json');
-    if (response.ok) {
-      designersData = await response.json();
+    const rows = await window.supabaseClient.getDesigners();
+    if (rows && rows.length > 0) {
+      designersData = { designers: rows.map(r => window.supabaseClient.fromDbFormat(r)) };
+    } else {
+      console.log('No data in Supabase, starting fresh');
+      designersData = { designers: [] };
     }
   } catch (error) {
-    console.log('No existing data found, starting fresh');
+    console.error('Error loading from Supabase:', error);
     designersData = { designers: [] };
   }
   // Populate sidebar with designer links
@@ -85,12 +88,11 @@ function populateDesignerNav() {
   });
 }
 
-// Save data - for static site, we'll use localStorage as backup
-// In production, this would POST to a server
-function saveDesignersData() {
-  localStorage.setItem('designersData', JSON.stringify(designersData));
-  // Download updated JSON for manual save
-  console.log('Data saved to localStorage. To persist permanently, download the JSON.');
+// Save all data to Supabase
+async function saveDesignersData() {
+  // This function is called after individual updates
+  // The actual saves happen in updateDesigner, addDesigner, etc.
+  console.log('Data synced with Supabase');
 }
 
 // Export data as downloadable JSON
@@ -116,60 +118,84 @@ function getDesignerById(id) {
 }
 
 // Add new designer
-function addDesigner(designer) {
+async function addDesigner(designer) {
   designer.id = designer.name.toLowerCase().replace(/\s+/g, '-');
   designer.lastUpdated = new Date().toISOString().split('T')[0];
-  designersData.designers.push(designer);
-  saveDesignersData();
-  return designer;
+
+  try {
+    const saved = await window.supabaseClient.createDesigner(designer);
+    if (saved) {
+      designersData.designers.push(saved);
+      populateDesignerNav();
+    }
+    return saved;
+  } catch (error) {
+    console.error('Error adding designer:', error);
+    return null;
+  }
 }
 
 // Update designer
-function updateDesigner(id, updates) {
+async function updateDesigner(id, updates) {
   const index = designersData.designers.findIndex(d => d.id === id);
   if (index !== -1) {
-    designersData.designers[index] = {
+    const updated = {
       ...designersData.designers[index],
       ...updates,
       lastUpdated: new Date().toISOString().split('T')[0]
     };
-    saveDesignersData();
-    return designersData.designers[index];
+
+    try {
+      const saved = await window.supabaseClient.updateDesigner(id, updated);
+      if (saved) {
+        designersData.designers[index] = saved;
+      }
+      return saved;
+    } catch (error) {
+      console.error('Error updating designer:', error);
+      return null;
+    }
   }
   return null;
 }
 
 // Delete designer
-function deleteDesigner(id) {
+async function deleteDesigner(id) {
   const index = designersData.designers.findIndex(d => d.id === id);
   if (index !== -1) {
-    designersData.designers.splice(index, 1);
-    saveDesignersData();
-    return true;
+    try {
+      await window.supabaseClient.deleteDesigner(id);
+      designersData.designers.splice(index, 1);
+      populateDesignerNav();
+      return true;
+    } catch (error) {
+      console.error('Error deleting designer:', error);
+      return false;
+    }
   }
   return false;
 }
 
 // Add progress note
-function addProgressNote(designerId, note) {
+async function addProgressNote(designerId, note) {
   const designer = getDesignerById(designerId);
   if (designer) {
     designer.progressNotes.push({
       date: new Date().toISOString().split('T')[0],
       note: note
     });
-    saveDesignersData();
+    await updateDesigner(designerId, { progressNotes: designer.progressNotes });
     return true;
   }
   return false;
 }
 
 // Update action item status
-function updateActionItemStatus(designerId, actionIndex, newStatus) {
+async function updateActionItemStatus(designerId, actionIndex, newStatus) {
   const designer = getDesignerById(designerId);
   if (designer && designer.actionItems[actionIndex]) {
     designer.actionItems[actionIndex].status = newStatus;
-    saveDesignersData();
+    await updateDesigner(designerId, { actionItems: designer.actionItems });
     return true;
   }
   return false;
