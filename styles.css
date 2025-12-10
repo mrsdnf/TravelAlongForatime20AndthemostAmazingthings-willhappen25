@@ -383,6 +383,24 @@ button.glass-card:hover {
     display: none;
 }
 
+.nav-item-sub {
+    padding-left: 28px;
+    font-size: 0.9rem;
+}
+
+.nav-item-sub i {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.nav-item-empty {
+    display: block;
+    padding: 8px 16px 8px 28px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    font-style: italic;
+}
+
 .sidebar.collapsed .logo span {
     display: none;
 }
@@ -1420,6 +1438,10 @@ button.glass-card:hover {
     .hero-stats {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 1200px) {
@@ -1444,6 +1466,10 @@ button.glass-card:hover {
     .two-column {
         grid-template-columns: 1fr;
     }
+
+    .designers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1456,6 +1482,30 @@ button.glass-card:hover {
     .agents-grid,
     .checklist-container {
         grid-template-columns: 1fr;
+    }
+
+    .designers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Competency matrix horizontal scroll */
+    .competency-matrix-wrapper {
+        margin: 0 -16px;
+        padding: 0 16px;
+    }
+
+    .competency-matrix th,
+    .competency-matrix td {
+        padding: 10px 6px;
+        font-size: 0.75rem;
+    }
+
+    .competency-matrix .designer-col {
+        min-width: 120px;
+    }
+
+    .competency-matrix .tool-col {
+        min-width: 60px;
     }
 }
 
@@ -1471,19 +1521,40 @@ button.glass-card:hover {
 
     .main-content {
         margin-left: 0;
-        padding: 24px 20px;
+        padding: 80px 16px 24px;
     }
 
     .sidebar.collapsed ~ .main-content {
         margin-left: 0;
     }
 
+    .page-header {
+        margin-bottom: 24px;
+    }
+
     .page-header h1 {
         font-size: 1.75rem;
     }
 
+    .page-header .subtitle {
+        font-size: 1rem;
+    }
+
     .hero-stats {
         grid-template-columns: 1fr;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .stat-card {
+        padding: 16px;
+    }
+
+    .stat-card .stat-number {
+        font-size: 2rem;
     }
 
     .links-grid {
@@ -1498,6 +1569,90 @@ button.glass-card:hover {
         left: -50px;
         width: 40px;
         height: 40px;
+    }
+
+    /* Section headers stack on mobile */
+    .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+
+    .section-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .filter-buttons {
+        width: 100%;
+    }
+
+    .filter-btn {
+        flex: 1;
+        text-align: center;
+    }
+
+    /* Action items */
+    .action-item-row {
+        flex-wrap: wrap;
+        padding: 12px;
+    }
+
+    .action-content {
+        order: 1;
+        width: calc(100% - 44px);
+    }
+
+    .action-item-row .status-badge,
+    .action-item-row .owner-badge {
+        order: 2;
+        margin-top: 8px;
+    }
+
+    /* Designer cards */
+    .designer-card {
+        padding: 16px;
+    }
+
+    .designer-card-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .key-insight {
+        font-size: 0.85rem;
+    }
+
+    /* Principle card */
+    .principle-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .principle-icon {
+        margin-bottom: 12px;
+    }
+
+    /* Quick links */
+    .quick-link {
+        padding: 16px;
+    }
+
+    /* Tool cards */
+    .tool-card {
+        padding: 20px;
+    }
+
+    /* Pain points and tips */
+    .pain-point,
+    .tip-card,
+    .result-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .pain-icon {
+        margin-bottom: 12px;
     }
 
     /* Mobile menu toggle */
@@ -1534,6 +1689,34 @@ button.glass-card:hover {
     .sidebar-overlay.active {
         display: block;
     }
+
+    /* Modal full screen on mobile */
+    .modal-overlay {
+        padding: 0;
+        align-items: flex-end;
+    }
+
+    .modal-content {
+        max-width: 100%;
+        max-height: 90vh;
+        border-radius: var(--border-radius) var(--border-radius) 0 0;
+    }
+
+    .modal-header {
+        padding: 16px 20px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.2rem;
+    }
+
+    .form-section {
+        padding: 16px 20px;
+    }
+
+    .form-actions {
+        padding: 16px 20px;
+    }
 }
 
 @media (max-width: 480px) {
@@ -1542,15 +1725,115 @@ button.glass-card:hover {
         --border-radius-sm: 10px;
     }
 
+    .main-content {
+        padding: 70px 12px 20px;
+    }
+
     .page-header h1 {
-        font-size: 1.5rem;
+        font-size: 1.35rem;
+    }
+
+    .page-header .subtitle {
+        font-size: 0.9rem;
     }
 
     .stat-card,
     .quick-link,
     .tool-card,
     .agent-card {
+        padding: 16px;
+    }
+
+    .stat-card .stat-number {
+        font-size: 1.75rem;
+    }
+
+    /* Designer profile */
+    .profile-header {
         padding: 20px;
+    }
+
+    .profile-title h1 {
+        font-size: 1.5rem;
+    }
+
+    .profile-section {
+        padding: 16px;
+    }
+
+    /* Timeline items */
+    .timeline-container {
+        padding-left: 40px;
+    }
+
+    .timeline-line {
+        left: 16px;
+    }
+
+    .phase-marker {
+        left: -40px;
+        width: 32px;
+        height: 32px;
+    }
+
+    .phase-number {
+        font-size: 1rem;
+    }
+
+    .phase-content {
+        padding: 16px;
+    }
+
+    .timeline-item {
+        padding: 12px 14px;
+    }
+
+    /* Competency matrix very compact */
+    .competency-matrix th,
+    .competency-matrix td {
+        padding: 8px 4px;
+        font-size: 0.65rem;
+    }
+
+    .proficiency-badge,
+    .priority-badge,
+    .status-badge,
+    .owner-badge {
+        padding: 3px 6px;
+        font-size: 0.6rem;
+    }
+
+    /* Action items compact */
+    .action-item-row {
+        padding: 10px;
+        gap: 8px;
+    }
+
+    .status-toggle {
+        width: 28px;
+        height: 28px;
+        font-size: 0.85rem;
+    }
+
+    .action-text {
+        font-size: 0.8rem;
+    }
+
+    /* Buttons */
+    .btn-primary,
+    .btn-secondary {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+    }
+
+    .edit-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+
+    .add-btn {
+        padding: 8px 14px;
+        font-size: 0.85rem;
     }
 }
 
@@ -1719,6 +2002,12 @@ button.glass-card:hover {
     font-size: 0.7rem;
     font-weight: 500;
     cursor: help;
+}
+
+.competency-matrix .proficiency-cell.not-interviewed {
+    color: var(--text-muted);
+    background-color: transparent !important;
+    opacity: 0.5;
 }
 
 /* Designer Cards Grid */
@@ -2418,17 +2707,15 @@ button.glass-card:hover {
 }
 
 /* Responsive adjustments for Team Progress */
-@media (max-width: 768px) {
-    .stats-grid {
-        grid-template-columns: 1fr;
+@media (max-width: 1024px) {
+    .tool-proficiency-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
+}
 
+@media (max-width: 768px) {
     .competency-matrix {
         font-size: 0.75rem;
-    }
-
-    .designers-grid {
-        grid-template-columns: 1fr;
     }
 
     .tool-proficiency-grid {
@@ -2451,6 +2738,83 @@ button.glass-card:hover {
     .profile-meta {
         flex-direction: column;
         gap: 8px;
+    }
+
+    .profile-header {
+        padding: 20px;
+    }
+
+    .profile-section {
+        padding: 16px;
+        margin-bottom: 16px;
+    }
+
+    .profile-section h3 {
+        font-size: 1rem;
+        margin-bottom: 16px;
+    }
+
+    .profile-insight {
+        padding: 16px;
+    }
+
+    .profile-insight p {
+        font-size: 1rem;
+    }
+
+    /* Goals and pain points */
+    .goal-item {
+        padding: 10px 12px;
+    }
+
+    .pain-point-item {
+        padding: 12px;
+    }
+
+    .progress-note {
+        padding: 12px;
+    }
+
+    /* Tool items */
+    .tool-item {
+        padding: 12px;
+    }
+
+    .tool-item .tool-header {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-title h1 {
+        font-size: 1.4rem;
+    }
+
+    .team-badge.large {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+    }
+
+    .edit-btn {
+        width: 100%;
+        margin-top: 12px;
+    }
+
+    /* Dynamic list items in forms */
+    .dynamic-list-item {
+        flex-direction: column;
+        padding: 12px;
+    }
+
+    .dynamic-list-item .remove-btn {
+        margin-top: 8px;
+        align-self: flex-end;
+    }
+
+    /* Tool input groups */
+    .tool-input-group {
+        padding: 12px;
     }
 }
 

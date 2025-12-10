@@ -48,7 +48,41 @@ async function loadDesignersData() {
     console.log('No existing data found, starting fresh');
     designersData = { designers: [] };
   }
+  // Populate sidebar with designer links
+  populateDesignerNav();
   return designersData;
+}
+
+// Populate the sidebar with designer links
+function populateDesignerNav() {
+  const navContainer = document.getElementById('designer-nav-items');
+  if (!navContainer) return;
+
+  const designers = getDesigners();
+  if (designers.length === 0) {
+    navContainer.innerHTML = `
+      <span class="nav-item-empty">No designers yet</span>
+    `;
+    return;
+  }
+
+  navContainer.innerHTML = designers.map(d => `
+    <a href="#designer/${d.id}" class="nav-item nav-item-sub" data-page="designer/${d.id}">
+      <i class="fas fa-user" aria-hidden="true"></i>
+      <span>${d.name}</span>
+    </a>
+  `).join('');
+
+  // Add click handlers to the new nav items
+  navContainer.querySelectorAll('.nav-item').forEach(item => {
+    item.addEventListener('click', function(e) {
+      e.preventDefault();
+      const page = this.getAttribute('data-page');
+      if (window.navigateTo) {
+        window.navigateTo(page);
+      }
+    });
+  });
 }
 
 // Save data - for static site, we'll use localStorage as backup
@@ -144,8 +178,8 @@ function updateActionItemStatus(designerId, actionIndex, newStatus) {
 // Get summary statistics
 function getSummaryStats() {
   const designers = getDesigners();
-  const totalDesigners = 10; // Target count
-  const interviewedCount = designers.length;
+  const totalDesigners = 6; // Target count
+  const interviewedCount = designers.filter(d => d.interviewDate && d.interviewDate.length > 0).length;
 
   // Count pending action items
   let pendingActions = 0;
@@ -242,9 +276,13 @@ function renderCompetencyMatrix() {
   `;
 
   designers.forEach(d => {
+    const isInterviewed = d.interviewDate && d.interviewDate.length > 0;
     html += `<tr>
-      <td class="designer-name"><a href="#designer/${d.id}">${d.name}</a><span class="team-label">${d.team}</span></td>
+      <td class="designer-name"><a href="#designer/${d.id}">${d.name}</a><span class="team-label">${d.team || (isInterviewed ? '' : 'Pending')}</span></td>
       ${toolKeys.map(key => {
+        if (!isInterviewed) {
+          return `<td class="proficiency-cell not-interviewed" title="Interview pending">—</td>`;
+        }
         const prof = d.toolProficiency[key] || { level: 'none', notes: '' };
         const levelInfo = PROFICIENCY_LEVELS[prof.level];
         return `<td class="proficiency-cell" style="background-color: ${levelInfo.color}30;" title="${prof.notes || 'No notes'}">${levelInfo.label}</td>`;
@@ -425,7 +463,7 @@ function renderTeamOverview() {
       </div>
       <div class="designers-grid">
         ${designers.map(d => renderDesignerCard(d)).join('')}
-        ${designers.length < 10 ? `
+        ${designers.length < 6 ? `
           <div class="designer-card glass-card clickable empty-card" onclick="openAddDesignerModal()">
             <span class="add-icon">+</span>
             <span>Add Designer</span>

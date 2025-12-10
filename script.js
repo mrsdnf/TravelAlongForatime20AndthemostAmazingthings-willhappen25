@@ -98,11 +98,11 @@ document.addEventListener('DOMContentLoaded', function() {
             actualPageId = 'designer-profile';
         }
 
-        // Update active states
-        navItems.forEach(item => {
+        // Update active states for all nav items (including dynamically added designer links)
+        document.querySelectorAll('.sidebar .nav-item').forEach(item => {
             item.classList.remove('active');
             const itemPage = item.getAttribute('data-page');
-            if (itemPage === pageId || (itemPage === 'team-overview' && actualPageId === 'designer-profile')) {
+            if (itemPage === pageId) {
                 item.classList.add('active');
             }
         });

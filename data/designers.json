@@ -50,15 +50,15 @@
       "interviewDate": "2025-12-09",
       "lastUpdated": "2025-12-09",
       "toolProficiency": {
-        "gnpt": { "level": "none", "notes": "" },
+        "gnpt": { "level": "confident", "notes": "Uses extensively as advisor/conversation partner, not for solutions" },
         "rovo": { "level": "none", "notes": "" },
         "figmaAI": { "level": "none", "notes": "Excited for when available - sees it as game changer for token naming, spell checking, consistency" },
         "copilot": { "level": "none", "notes": "" },
         "miroAI": { "level": "none", "notes": "" },
         "githubCopilot": { "level": "none", "notes": "" },
-        "claude": { "level": "learning", "notes": "Starting to explore for digital design systems, prefers over Gemini" },
-        "chatgpt": { "level": "confident", "notes": "Uses extensively as advisor/conversation partner, not for solutions" },
-        "gemini": { "level": "minimal", "notes": "Tried, prefers Claude" },
+        "claude": { "level": "none", "notes": "" },
+        "chatgpt": { "level": "none", "notes": "" },
+        "gemini": { "level": "none", "notes": "" },
         "lovable": { "level": "none", "notes": "" }
       },
       "painPoints": [
@@ -83,9 +83,113 @@
         { "action": "Schedule follow-up meeting", "owner": "ditte", "status": "pending" }
       ],
       "progressNotes": [
-        { "date": "2025-12-09", "note": "Initial discussion. Very enthusiastic about digital design systems direction. Uses AI extensively as advisor/conversation partner rather than for solutions. Willing to contribute as much as needed but currently focused on Mumbai work through current PI. Will be more available after this PI. Concerned about security - wants written approval before using design system data with Claude." }
+        { "date": "2025-12-09", "note": "Initial discussion. Very enthusiastic about digital design systems direction. Uses GNPT as advisor/conversation partner rather than for direct solutions. Willing to contribute as much as needed but currently focused on Mumbai work through current PI. Will be more available after this PI. Concerned about security - wants written approval before using design system data with external AI tools." }
       ],
-      "keyInsight": "Experienced AI user who sees it as advisor not solution-giver. Excited about digital design system vision but needs clear roadmap, security approval, and time allocation after current PI"
+      "keyInsight": "Uses GNPT as advisor/conversation partner. Excited about digital design system vision but needs clear roadmap, security approval, and time allocation after current PI"
+    },
+    {
+      "id": "maria",
+      "name": "Maria",
+      "team": "",
+      "interviewDate": "",
+      "lastUpdated": "",
+      "toolProficiency": {
+        "gnpt": { "level": "none", "notes": "" },
+        "rovo": { "level": "none", "notes": "" },
+        "figmaAI": { "level": "none", "notes": "" },
+        "copilot": { "level": "none", "notes": "" },
+        "miroAI": { "level": "none", "notes": "" },
+        "githubCopilot": { "level": "none", "notes": "" },
+        "claude": { "level": "none", "notes": "" },
+        "chatgpt": { "level": "none", "notes": "" },
+        "gemini": { "level": "none", "notes": "" },
+        "lovable": { "level": "none", "notes": "" }
+      },
+      "painPoints": [],
+      "goals": [],
+      "actionItems": [
+        { "action": "Schedule interview", "owner": "ditte", "status": "pending" }
+      ],
+      "progressNotes": [],
+      "keyInsight": "Interview pending"
+    },
+    {
+      "id": "sebastian",
+      "name": "Sebastian",
+      "team": "",
+      "interviewDate": "",
+      "lastUpdated": "",
+      "toolProficiency": {
+        "gnpt": { "level": "none", "notes": "" },
+        "rovo": { "level": "none", "notes": "" },
+        "figmaAI": { "level": "none", "notes": "" },
+        "copilot": { "level": "none", "notes": "" },
+        "miroAI": { "level": "none", "notes": "" },
+        "githubCopilot": { "level": "none", "notes": "" },
+        "claude": { "level": "none", "notes": "" },
+        "chatgpt": { "level": "none", "notes": "" },
+        "gemini": { "level": "none", "notes": "" },
+        "lovable": { "level": "none", "notes": "" }
+      },
+      "painPoints": [],
+      "goals": [],
+      "actionItems": [
+        { "action": "Schedule interview", "owner": "ditte", "status": "pending" }
+      ],
+      "progressNotes": [],
+      "keyInsight": "Interview pending"
+    },
+    {
+      "id": "karolina",
+      "name": "Karolina",
+      "team": "",
+      "interviewDate": "",
+      "lastUpdated": "",
+      "toolProficiency": {
+        "gnpt": { "level": "none", "notes": "" },
+        "rovo": { "level": "none", "notes": "" },
+        "figmaAI": { "level": "none", "notes": "" },
+        "copilot": { "level": "none", "notes": "" },
+        "miroAI": { "level": "none", "notes": "" },
+        "githubCopilot": { "level": "none", "notes": "" },
+        "claude": { "level": "none", "notes": "" },
+        "chatgpt": { "level": "none", "notes": "" },
+        "gemini": { "level": "none", "notes": "" },
+        "lovable": { "level": "none", "notes": "" }
+      },
+      "painPoints": [],
+      "goals": [],
+      "actionItems": [
+        { "action": "Schedule interview", "owner": "ditte", "status": "pending" }
+      ],
+      "progressNotes": [],
+      "keyInsight": "Interview pending"
+    },
+    {
+      "id": "alexander",
+      "name": "Alexander",
+      "team": "",
+      "interviewDate": "",
+      "lastUpdated": "",
+      "toolProficiency": {
+        "gnpt": { "level": "none", "notes": "" },
+        "rovo": { "level": "none", "notes": "" },
+        "figmaAI": { "level": "none", "notes": "" },
+        "copilot": { "level": "none", "notes": "" },
+        "miroAI": { "level": "none", "notes": "" },
+        "githubCopilot": { "level": "none", "notes": "" },
+        "claude": { "level": "none", "notes": "" },
+        "chatgpt": { "level": "none", "notes": "" },
+        "gemini": { "level": "none", "notes": "" },
+        "lovable": { "level": "none", "notes": "" }
+      },
+      "painPoints": [],
+      "goals": [],
+      "actionItems": [
+        { "action": "Schedule interview", "owner": "ditte", "status": "pending" }
+      ],
+      "progressNotes": [],
+      "keyInsight": "Interview pending"
     }
   ]
 }
