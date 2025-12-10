@@ -32,71 +32,91 @@
         </div>
 
         <div class="nav-section" role="group" aria-labelledby="nav-overview">
-            <span class="nav-label" id="nav-overview">Overview</span>
-            <a href="#dashboard" class="nav-item active" data-page="dashboard">
-                <i class="fas fa-th-large" aria-hidden="true"></i>
-                <span>Dashboard</span>
-            </a>
-            <a href="#timeline" class="nav-item" data-page="timeline">
-                <i class="fas fa-stream" aria-hidden="true"></i>
-                <span>Timeline</span>
-            </a>
-            <a href="#team-overview" class="nav-item" data-page="team-overview">
-                <i class="fas fa-users" aria-hidden="true"></i>
-                <span>Team Overview</span>
-            </a>
+            <button class="nav-label-toggle" id="nav-overview" aria-expanded="true">
+                <span>Overview</span>
+                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+            </button>
+            <div class="nav-items">
+                <a href="#dashboard" class="nav-item active" data-page="dashboard">
+                    <i class="fas fa-th-large" aria-hidden="true"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#timeline" class="nav-item" data-page="timeline">
+                    <i class="fas fa-stream" aria-hidden="true"></i>
+                    <span>Timeline</span>
+                </a>
+                <a href="#team-overview" class="nav-item" data-page="team-overview">
+                    <i class="fas fa-users" aria-hidden="true"></i>
+                    <span>Team Overview</span>
+                </a>
+            </div>
         </div>
 
         <div class="nav-section" role="group" aria-labelledby="nav-tools">
-            <span class="nav-label" id="nav-tools">AI Tools</span>
-            <a href="#tools" class="nav-item" data-page="tools">
-                <i class="fas fa-tools" aria-hidden="true"></i>
-                <span>Tool Strategy</span>
-            </a>
+            <button class="nav-label-toggle" id="nav-tools" aria-expanded="true">
+                <span>AI Tools</span>
+                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+            </button>
+            <div class="nav-items">
+                <a href="#tools" class="nav-item" data-page="tools">
+                    <i class="fas fa-tools" aria-hidden="true"></i>
+                    <span>Tool Strategy</span>
+                </a>
+            </div>
         </div>
 
-        <div class="nav-section" role="group" aria-labelledby="nav-phases">
-            <span class="nav-label" id="nav-phases">Design Phases</span>
-            <a href="#phase1" class="nav-item" data-page="phase1">
-                <i class="fas fa-clipboard-check" aria-hidden="true"></i>
-                <span>Feature Readiness</span>
-            </a>
-            <a href="#phase2" class="nav-item" data-page="phase2">
-                <i class="fas fa-compass" aria-hidden="true"></i>
-                <span>Initial Investigation</span>
-            </a>
-            <a href="#research" class="nav-item" data-page="research">
-                <i class="fas fa-microscope" aria-hidden="true"></i>
-                <span>Research</span>
-            </a>
-            <a href="#phase3" class="nav-item" data-page="phase3">
-                <i class="fas fa-pencil-ruler" aria-hidden="true"></i>
-                <span>Wireframing</span>
-            </a>
-            <a href="#phase4" class="nav-item" data-page="phase4">
-                <i class="fas fa-project-diagram" aria-hidden="true"></i>
-                <span>UI Flows</span>
-            </a>
-            <a href="#phase5" class="nav-item" data-page="phase5">
-                <i class="fas fa-file-export" aria-hidden="true"></i>
-                <span>Handover</span>
-            </a>
+        <div class="nav-section collapsed" role="group" aria-labelledby="nav-phases">
+            <button class="nav-label-toggle" id="nav-phases" aria-expanded="false">
+                <span>Design Phases</span>
+                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+            </button>
+            <div class="nav-items">
+                <a href="#phase1" class="nav-item" data-page="phase1">
+                    <i class="fas fa-clipboard-check" aria-hidden="true"></i>
+                    <span>Feature Readiness</span>
+                </a>
+                <a href="#phase2" class="nav-item" data-page="phase2">
+                    <i class="fas fa-compass" aria-hidden="true"></i>
+                    <span>Initial Investigation</span>
+                </a>
+                <a href="#research" class="nav-item" data-page="research">
+                    <i class="fas fa-microscope" aria-hidden="true"></i>
+                    <span>Research</span>
+                </a>
+                <a href="#phase3" class="nav-item" data-page="phase3">
+                    <i class="fas fa-pencil-ruler" aria-hidden="true"></i>
+                    <span>Wireframing</span>
+                </a>
+                <a href="#phase4" class="nav-item" data-page="phase4">
+                    <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                    <span>UI Flows</span>
+                </a>
+                <a href="#phase5" class="nav-item" data-page="phase5">
+                    <i class="fas fa-file-export" aria-hidden="true"></i>
+                    <span>Handover</span>
+                </a>
+            </div>
         </div>
 
-        <div class="nav-section" role="group" aria-labelledby="nav-infra">
-            <span class="nav-label" id="nav-infra">Infrastructure</span>
-            <a href="#dev-process" class="nav-item" data-page="dev-process">
-                <i class="fas fa-diagram-project" aria-hidden="true"></i>
-                <span>Dev Process</span>
-            </a>
-            <a href="#agents" class="nav-item" data-page="agents">
-                <i class="fas fa-robot" aria-hidden="true"></i>
-                <span>AI Agents</span>
-            </a>
-            <a href="#checklist" class="nav-item" data-page="checklist">
-                <i class="fas fa-list-check" aria-hidden="true"></i>
-                <span>Usage Checklist</span>
-            </a>
+        <div class="nav-section collapsed" role="group" aria-labelledby="nav-infra">
+            <button class="nav-label-toggle" id="nav-infra" aria-expanded="false">
+                <span>Infrastructure</span>
+                <i class="fas fa-chevron-down toggle-icon" aria-hidden="true"></i>
+            </button>
+            <div class="nav-items">
+                <a href="#dev-process" class="nav-item" data-page="dev-process">
+                    <i class="fas fa-diagram-project" aria-hidden="true"></i>
+                    <span>Dev Process</span>
+                </a>
+                <a href="#agents" class="nav-item" data-page="agents">
+                    <i class="fas fa-robot" aria-hidden="true"></i>
+                    <span>AI Agents</span>
+                </a>
+                <a href="#checklist" class="nav-item" data-page="checklist">
+                    <i class="fas fa-list-check" aria-hidden="true"></i>
+                    <span>Usage Checklist</span>
+                </a>
+            </div>
         </div>
 
     </nav>

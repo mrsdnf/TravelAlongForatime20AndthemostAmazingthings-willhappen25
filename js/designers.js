@@ -259,7 +259,7 @@ function renderCompetencyMatrix() {
 function renderDesignerCard(designer) {
   const topAction = designer.actionItems.find(a => a.status !== 'done');
   return `
-    <div class="designer-card glass-card" onclick="navigateTo('designer/${designer.id}')">
+    <div class="designer-card glass-card clickable" onclick="navigateTo('designer/${designer.id}')">
       <div class="designer-card-header">
         <h3>${designer.name}</h3>
         <span class="team-badge">${designer.team}</span>
@@ -426,7 +426,7 @@ function renderTeamOverview() {
       <div class="designers-grid">
         ${designers.map(d => renderDesignerCard(d)).join('')}
         ${designers.length < 10 ? `
-          <div class="designer-card glass-card empty-card" onclick="openAddDesignerModal()">
+          <div class="designer-card glass-card clickable empty-card" onclick="openAddDesignerModal()">
             <span class="add-icon">+</span>
             <span>Add Designer</span>
           </div>

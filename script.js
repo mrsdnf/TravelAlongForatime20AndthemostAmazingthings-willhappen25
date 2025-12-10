@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
         setupSidebarToggle();
         setupMobileMenu();
         setupHashNavigation();
+        setupNavSectionToggles();
 
         // Load designer data
         if (window.designerTracker) {
@@ -29,6 +30,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
         // Handle initial hash
         handleHash();
+    }
+
+    /**
+     * Nav Section Collapse Toggles
+     */
+    function setupNavSectionToggles() {
+        const toggles = document.querySelectorAll('.nav-label-toggle');
+        toggles.forEach(toggle => {
+            toggle.addEventListener('click', function() {
+                const section = this.closest('.nav-section');
+                const isCollapsed = section.classList.toggle('collapsed');
+                this.setAttribute('aria-expanded', !isCollapsed);
+            });
+        });
     }
 
     /**
