@@ -2405,3 +2405,140 @@ body {
         gap: 8px;
     }
 }
+
+/* ==========================================
+   Development Process Page Styles
+   ========================================== */
+
+.process-phases {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.process-phase {
+    padding: 0;
+    overflow: hidden;
+}
+
+.phase-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 20px 24px;
+    background: linear-gradient(135deg, var(--accent-primary-soft), rgba(139, 92, 246, 0.1));
+    border-bottom: 1px solid var(--glass-border);
+}
+
+.phase-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: white;
+    flex-shrink: 0;
+}
+
+.phase-header h3 {
+    flex: 1;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.phase-icon {
+    font-size: 1.5rem;
+    color: var(--accent-tertiary);
+    opacity: 0.8;
+}
+
+.phase-comparison {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+}
+
+.phase-comparison .traditional,
+.phase-comparison .ai-enhanced {
+    padding: 24px;
+}
+
+.phase-comparison .traditional {
+    background: rgba(255, 255, 255, 0.02);
+    border-right: 1px solid var(--glass-border);
+}
+
+.phase-comparison .ai-enhanced {
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.05), rgba(139, 92, 246, 0.08));
+}
+
+.phase-comparison h4 {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0 0 12px 0;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.phase-comparison .traditional h4 {
+    color: var(--text-muted);
+}
+
+.phase-comparison .traditional h4 i {
+    color: var(--text-muted);
+}
+
+.phase-comparison .ai-enhanced h4 {
+    color: var(--accent-tertiary);
+}
+
+.phase-comparison .ai-enhanced h4 i {
+    color: var(--accent-primary);
+}
+
+.phase-comparison p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--text-secondary);
+}
+
+/* Responsive adjustments for Development Process */
+@media (max-width: 768px) {
+    .phase-comparison {
+        grid-template-columns: 1fr;
+    }
+
+    .phase-comparison .traditional {
+        border-right: none;
+        border-bottom: 1px solid var(--glass-border);
+    }
+
+    .phase-header {
+        padding: 16px 20px;
+    }
+
+    .phase-header h3 {
+        font-size: 1.1rem;
+    }
+
+    .phase-number {
+        width: 32px;
+        height: 32px;
+        font-size: 1rem;
+    }
+
+    .phase-comparison .traditional,
+    .phase-comparison .ai-enhanced {
+        padding: 20px;
+    }
+}
